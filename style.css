@@ -457,7 +457,90 @@ footer h3{
 .bi.bi-box-arrow-left{
     display: none;
 }
+section .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 2rem 6rem;
+    background-color: rgba(8, 29, 25, 1);
+}
 
+.card {
+    display: grid;
+    background-color: #03110f;
+    border-radius: 25px;
+}
+.card-header {
+    background-image: url("frame.jpg");
+    background-position: center;
+    height: 160px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.profile-picture {
+    width: 70px;
+    height: 70px;
+    border: 2px solid gold;
+    border-radius: 10px;
+    background-color: #03110f;
+    margin-top: -27.5px;
+    margin-left: 15px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #00ffff;
+    margin: 10px 15px 0 15px;
+}
+
+.card p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin: 5px 15px 0 15px;
+}
+
+.game-title {
+    justify-self: end;
+    margin: 10px 15px 15px 0;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card:nth-child(1) .game-title,
+.card:nth-child(4) .game-title {
+    background-color: #5e1e1d;
+    border: 1px solid red;
+    color: red;
+}
+
+.card:nth-child(2) .game-title,
+.card:nth-child(5) .game-title {
+    background-color: #5e4f11;
+    border: 1px solid yellow;
+    color: yellow;
+}
+
+.card:nth-child(3) .game-title,
+.card:nth-child(6) .game-title {
+    background-color: #782805;
+    border: 1px solid orange;
+    color: orange;
+}
+
+.card button {
+    border: none;
+    height: 45px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #7CE9D1 0%, rgba(124, 233, 209, 0.6) 100%);
+    font-weight: bold;
+    filter: drop-shadow(2px 2px 10px #00ffff);
+}
 @media screen and (max-width: 720px) {
     .col-md-3{
         position: absolute;
@@ -576,4 +659,3 @@ footer h3{
         width: 10%;
     }
 }
-
