@@ -340,8 +340,7 @@ footer h3{
 .search-text input{
     width: 77%;
     padding: 10px 40px 10px 10px;
-    border: 2px solid rgba(124, 233, 209, 1);
-    border-radius: 20px;
+    border: none;
     outline: none;
     font-size: 16px;
     background-color: transparent;
@@ -355,17 +354,19 @@ footer h3{
 
 .search-text{
     width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border: 2px solid #00ffff;
+    border-radius: 30px;
 }
 
 .search-btn{
-    position: absolute;
-    left: 19rem;
-    top: 26%;
-    transform: translateY(-50%);
     color: #fff;
     cursor: pointer;
-    font-size: 20px;
     transition: color 0.2s;
+    text-align: end;
+    padding-right: 10px;
 }
 
 .snippet{
@@ -489,11 +490,6 @@ footer h3{
         color: black;    
     }
 
-    .search-btn{
-        left: 16rem;
-        top: 18%;
-    }
-
     .type-conversations{
         gap: 40px;
     }
@@ -565,10 +561,6 @@ footer h3{
     }
     .col{
         display: block;
-    }
-    .search-btn{
-        left: 23.5rem;
-        top: 16.5%;
     }
 
     .open-col-md-3-btn{
