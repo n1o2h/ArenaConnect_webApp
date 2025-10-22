@@ -586,6 +586,11 @@ section .container {
     .conversations-container{
         height: 70vh;
     }
+
+    section .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -657,5 +662,10 @@ section .container {
         top: 1.5rem;
         left: 7.3rem;
         width: 10%;
+    }
+
+    section .container {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
