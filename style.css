@@ -22,7 +22,7 @@
 body{
     margin: 0px;
     padding: 0px;
-   /*  background: var(--background-1); */
+    background: var(--background-2);
 }
 
 /* Header section */
@@ -126,6 +126,165 @@ footer{
 
 /***************************************************  Debut Aymen (Page accueil et connexion) ***************************************************/
 
+/* Hero section */
+.hero-section{
+    background: var(--background-1);
+}
+#hero-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 8rem;
+}
+#hero-section-maintext{
+    grid-column: span 2;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 44px;
+    color: var(--text-primary);
+}
+#hero-section-secondarytext{
+    grid-column: span 2;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    color: var(--text-primary);
+}
+#hero-section-B1{
+    align-content: center;
+    background: var(--gradient-button-1);
+    color: var(--secondary-color);
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 10px rgba(124, 233, 209, 0.6));
+    margin-left: 18rem;
+}
+#hero-section-B2{
+    align-items: center;
+    background: transparent;
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 12rem;
+}
+
+/* About section */
+#about{
+    background: var(--background-2);
+}
+#about-content{
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+}
+#about-content img{
+    max-width: 750px;
+}
+#about-text{
+    align-content: end;
+}
+.Ptitle{
+    font-weight: bolder;
+    font-size: 48px;
+    color: var(--accent);
+}
+.Ptext{
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--text-primary);
+}
+
+/* GameList */
+#gamelist{
+    background: var(--background-2);
+    padding: 5rem;
+}
+#gamelistBG{
+    background: var(--background-1);
+    border-radius: 16px;
+    padding: 2rem;
+}
+#gamelist-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+    margin: 3rem;
+}
+.gamelist-game{
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    width: 300px;
+    height: 200px;
+}
+
+/* ProfileEdit */
+#profileeditBG{
+    background: var(--background-2);
+    padding: 2rem;
+}
+#PEgrid1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#profile-preview{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background: var(--background-1);
+    width: 700px;
+    height: 800px;
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+}
+#profile-preview-banner{
+    height: 300px;
+    width: 696px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+#profile-preview-pfp img{
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+    margin-left: 1rem;
+    display: block;
+}
+#profile-preview-pfp span{
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--text-primary);
+}
+#profile-preview-bio{
+    background: var(--background-3);
+    border-radius: 8px;
+    margin: 2rem;
+}
+#profile-preview-bio h2{
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--text-primary);
+    margin: 1rem;
+}
+#gameFav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0.5rem 2rem 1rem 2rem;
+}
+.gameFav{
+    background: var(--secondary-color);
+    border-radius: 50px;
+    width: 150px;
+    height: 60px;
+}
+#profile-preview-text{
+    margin: 2rem;
+    align-content: end;
+}
+
 
 
 
@@ -147,6 +306,10 @@ footer{
 /***************************************************  Fin Nohaila (Page profile et parametre) ***************************************************/
 
 /***************************************************  Debut Salah (Page actualite et details) ***************************************************/
+
+
+
+
 
 
 
@@ -179,9 +342,7 @@ footer{
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    row-gap: 30px;
-    grid-column: 30px;
+    row-gap: 5rem;
     margin-top: 50px;
     height: auto;
 
@@ -226,7 +387,7 @@ footer{
     height: 50px;
     border-radius: 0px 0px 64px 64px;
     background: linear-gradient(to right, #7CE9D1 0%, rgba(124, 233, 209, 0.6) 100%);
-    box-shadow: 4px 4px 15px #7CE9D1;
+    filter: drop-shadow(2px 2px 10px rgba(124, 233, 209, 0.6));
     position: relative;
 }
 .articles .article .footer a{
@@ -316,7 +477,8 @@ footer{
 
 .details-section .btn{
     margin-top: 20px;
-    border: 1px solid #DFD73A;
+    border: 2px solid #DFD73A;
+    border-radius: 8px;
     width: 100px;
     height: 30px;
     justify-items: center;
