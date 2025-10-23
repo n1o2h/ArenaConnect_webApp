@@ -105,16 +105,13 @@ header nav>.liens-nav a{
     height: 300px;
     border-radius: 64px;
     border: 1px solid black;
-    
-    
-    
 }
 
 .articles .article .article-header img{
     width: 320px;
     height: 120px;
     border-radius: 64px 64px 0px 0px;
-    background-image: url(game1.jpg);
+    background-image: url(images/game1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -149,6 +146,37 @@ header nav>.liens-nav a{
     top: 12px;
     left: 120px;
     color: black;
+}
+
+/* media query pour la  page actualite pour le mobile */
+@media (max-width: 500px) {
+    .actualite-section h1{
+        font-size: 36px;
+        
+    }
+    .actualite-section hr{
+        width: 70px;
+    }
+    .actualite-section .articles{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* media query pour la  page actualite pour le tablettes */
+@media (min-width:481px) and (max-width: 768px) {
+    .actualite-section h1{
+        font-size: 46px;
+        
+    }
+    .actualite-section hr{
+        width: 80px;
+    }
+    .actualite-section .articles{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* css pour la page details  */
@@ -229,17 +257,64 @@ header nav>.liens-nav a{
 .details-section .btn{
     margin-top: 20px;
     border: 1px solid #DFD73A;
-    width: 100px;
-    height: 30px;
+    box-shadow: 1px 1px 5px  #DFD73A;
+    border-radius: 12px;
+    width: 170px;
+    height: 40px;
     justify-items: center;
+    position: relative;
 
 }
 
 .details-section .btn a{
     text-decoration: none;
     color: white;
-    justify-self: center;
+    position: relative;
+    font-size: large;
+    left: 60px;
+    top: 9px;
 }
+
+/* css pour la page details partie designe mobile */
+
+@media (max-width:480px){
+    .details-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+       
+    }
+
+    .details-section .card-details {
+        width: 95%;
+        max-width: 450px;
+        border-radius: 30px;
+        box-sizing: border-box;
+    }
+    .card-details h3 {
+        margin-top: 15px;
+        font-size: 25px;
+        order: 2;
+    }
+    .card-details .contaniers img{
+    width: 316px;
+    height: 163px;
+    border-radius: 30px;
+    order: 1;
+    }
+     .card-details .contaniers{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+   
+
+}
+
+
+
 
 
 
