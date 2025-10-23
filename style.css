@@ -828,12 +828,13 @@ footer h3{
 
 
 .social-media i{
-    border: 1px solid gold;
+    border: 2px solid var(--accent);
     border-radius: 8px;
     height: fit-content;
+    width: fit-content;
     padding: 10px;
     background-color: #524917;
-    color: gold;
+    color: var(--accent);
 }
 
 .search-text input{
