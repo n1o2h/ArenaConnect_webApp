@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/e53a9172bb.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* font */
+    @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+    </style>
     <title>Chat - E-ARENA</title>
 </head>
 <body>
@@ -46,22 +50,18 @@
             </form>
         </div>
     </div>
+    <!--Header Section-->
     <header>
-        <nav class="navbar">
-            <div class="logo">Arena <span style="color: #00ffff">Connect</span></div>
-            <div class="links" id="link">
-                <a href="">Acceuil</a>
-                <a href="">Joueurs</a>
-                <a href="">Actualité</a>
-                <a href="chat.html">Chat</a>
-                <a href="groups.html">Groupes</a>
-                <button onclick="displayModal()">Connexion</button>
-            </div>
-            <div class="menu" onclick="displayMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <nav>
+            <div id="LOGO"><a href="index.html" class="logo">Arena <span class="logoC">Connect</span></a></div>
+            <ul class="nav-list">
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="actualite.html">Acctualité</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="groups.html">Groups</a></li>
+                <li><a id="Button-Connexion" href="">Connexion</a></li>
+            </ul>
         </nav>
     </header>
     <section class="container">
@@ -287,38 +287,46 @@
             </div>
         </div>
     </section>
+    <!--footer-->
     <footer>
-        <div class="col">
-            <h3 style="color : white">Arena <span style="color: #00ffff">Connect</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi atque, eaque quasi recusandae beatae autem, neque cum dolorem nulla facilis itaque, sapiente amet officia omnis ipsa nesciunt esse voluptatum alias.</p>
-            <p style="color: grey;">© 2025 GameForge, Inc. Tous droits réservés.</p>
-        </div>
-        <div class="col">
-            <h3>Les jeux</h3>
-            <a href="">League of legends</a>
-            <a href="">Apex legends</a>
-            <a href="">Valorant</a>
-            <a href="">CS2</a>
-        </div>
-        <div class="col">
-            <h3>Navigation</h3>
-            <a href="">Acceuil</a>
-            <a href="">Joueurs</a>
-            <a href="">Profile</a>
-            <a href="">Actualité</a>
-            <a href="">Chat</a>
-            <a href="">Groupes</a>
-        </div>
-        <div class="col">
-            <h3>Contact</h3>
-            <div class="social-media">
-                <i class="bi bi-twitch"></i>
-                <i class="bi bi-twitter"></i>
-                <i class="bi bi-discord"></i>
-                <i class="bi bi-youtube"></i>
+        <div id="footer-grid">
+            <div id="Finfo">
+                <h2>Arena <span>Connect</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+                <p>© 2025 GameForge, Inc. Tous droits réservés.</p>
+            </div>
+            <div class="sec-title">
+                <h3>Les Jeux</h3>
+                <div class="sec-content">
+                    <h4>League of Legends</h4>
+                    <h4>Apec Legends</h4>
+                    <h4>Valorant</H4>
+                    <h4>CS2</h4>
+                </div>
+            </div>
+            <div class="sec-title">
+                <h3>Navigation</h3>
+                <div class="sec-content">
+                    <h4>Acceuil</h4>
+                    <h4>Joueurs</h4>
+                    <h4>Profile</h4>
+                    <h4>Acctualité</h4>
+                    <h4>Chat</h4>
+                    <h4>Groups</h4>
+                </div>
+            </div>
+            <div class="sec-title">
+                <h3>Contact</h3>
+                <div class="social-media">
+                    <i class="fa-brands fa-twitch"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-discord"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
