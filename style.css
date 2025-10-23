@@ -1,11 +1,38 @@
 /***************************************************  Debut Global /***************************************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
+:root{
+    --primary-color:#7CE9D1;
+    --secondary-color: #87171B;
+    --text-color: #DCF9F2;
+    --Third-color:#ffffff;
+    --background-Color:#00000033;
+    --background1: #03110F;
+    --accent: #DFD73A;
+    --background2: #081D19;
+    --color-enLigne: #1CD356;
+    --gradient-image: linear-gradient(to top, #0000009a 50% ,transparent)
+    }
 
-
-
-
-
-
+    body{
+        font-family: "Cal Sans", sans-serif;
+        background: var(--background2);
+        color: var(--Third-color);
+        letter-spacing: 0.1rem;
+        line-height: 1.4;
+    }
+    a{
+        text-decoration: none;
+        color: var(--Third-color);
+    }
+    li{
+        list-style:none;
+    }
 
 /***************************************************  Fin Global ***************************************************/
 
@@ -21,6 +48,340 @@
 /***************************************************  Fin Aymen (Page accueil et connexion) ***************************************************/
 
 /***************************************************  Debut Nohaila (Page profile et parametre) ***************************************************/
+                             /* baree navigation */
+header{
+    width: 100%;
+    height: 3rem;
+    background-color:var(--background1);
+    border: 2px solid var(--accent) ;
+    border-top-left-radius:16px;
+    border-top-right-radius:16px;
+    padding: 10px 20px;
+}
+header nav{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    
+    
+}
+.logo{
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--text-color);
+    grid-column: 1 / 2;
+    justify-self:start;    
+}
+.logo span{
+    color: var(--primary-color);
+}
+nav ul{
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    justify-content: end;
+    display: none;
+}
+
+
+                             /* image  background */
+.hero-profile{
+    width: auto;
+    height: 200px;
+    background-image: var(--gradient-image), url(Images/backgroundProfile.png);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "imageProfile  nomProfile  nomProfile parametre"
+    "imageProfile jeuFavori niveau parametre"
+    ;
+    place-items: center;
+    gap: 15px;
+}
+
+                             /* image  profile */
+
+.image-profile{
+    width: 80px;
+    height: 80px;
+    background-image: url(Images/imageProfile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    border: 2px solid var(--accent);
+    justify-self: end;
+    grid-area: imageProfile;
+}
+
+                             /*  block d'Information personnel du profile */
+
+.hero-profile h2{
+    grid-area:  nomProfile;
+    font-size: 1.3em;
+    font-weight: 700;
+    align-self: self-end;
+}
+.fa-circle{
+    color: var(--color-enLigne);
+    font-size: 0.3em;
+}
+.hero-profile p.jeu{
+    grid-area: jeuFavori;
+    align-self: self-start;
+
+}
+.hero-profile p.niveau{
+    grid-area: niveau;
+    align-self: self-start;
+
+}
+.parametre-icon{
+    padding: 1rem;
+    grid-area: parametre;
+    align-self: self-start;
+    font-size: 1em;
+    justify-self: end;
+}
+
+                             /* social media  Bio */
+.bio-container{
+    width: 100%;
+    /* height: 200px; */
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+    margin-bottom: 10px;
+}
+.social-media-icons{
+    padding: 20px;
+    background: var(--background2);
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-around;
+    place-items: center;
+}
+.icon-item{
+    padding: 10px;
+    border-bottom: var(--accent) solid 3px;
+}
+.icon-item i{
+    font-size: 1.2em;
+    color: var(--accent);
+}
+.icon-item:hover{
+    border-radius: 8px;
+    box-shadow: 0 0 2px var(--accent);
+    transition: 0.5s  ease;
+}
+
+                             /* citation du Bio */
+.bio-text{
+    border-radius: 8px;
+    width: 90%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    background: var(--background-Color);
+    box-shadow: 0 0 5px var(--Third-color);
+}
+.bio-text{
+    font-size: 0.8em;
+    font-weight: 300;
+    padding: 10px 5px;  
+    text-align: start;
+    font-style: italic;
+}
+                             /* Les  cartes de jeux */
+.carts-jeux{
+    padding: 30px;
+    width: 100%;
+    height:2400px;
+    display: grid;
+    grid-template-rows:repeat(auto-fill, minmax(200px, auto)) ;
+    grid-template-columns:repeat(auto-fill,minmax(300px, auto)) ;
+    gap: 20px;
+    
+}
+.item1{
+    background-image: url(Images/jeu1.png);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows:repeat(1, 1fr) ;
+    align-items: end;
+    overflow: hidden;
+}
+.item2{
+    background-image: url(Images/jeu2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.item3{
+    background-image: url(Images/jeu3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.item4{
+    background-image: url(Images/jeu4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cart-item-jeu{
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows:repeat(1, 1fr) ;
+    align-items: end;
+    overflow: hidden;
+}
+.nonjeu{
+    width: 100%;
+    height: 50px;
+    background:var(--accent);
+    text-align: center;
+    padding: 15px;
+    font-weight: 900;
+    font-size: 1em;
+    color: var(--background1);
+    display: none;
+}
+/* Media querie de la page profile  pour la tablet*/
+
+
+@media ( width >= 760px){
+    .hero-profile{
+        padding: 30px;
+        height: 300px;
+    }
+    .image-profile{
+        width: 150px;
+        height: 150px;
+    }
+    .hero-profile h2{
+        font-size: 1.5rem;
+    }
+    .hero-profile .fa-circle{
+        font-size: 1rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 1.3rem;
+    }
+    .parametre-icon{
+        font-size: 2rem;
+    }
+    .icon-items .icon-item{
+        font-size: 2rem;
+    }
+    .bio-text{
+        font-size: 1.3rem;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+}
+
+
+
+@media (width >= 1200px){
+    .hero-profile{
+        padding: 30px;
+        height: 400px;
+    }
+    .image-profile{
+        width: 250px;
+        height: 250px;
+    }
+    .hero-profile h2{
+        font-size: 3rem;
+    }       
+    .hero-profile .fa-circle{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 1.5rem;
+    }
+    .parametre-icon{
+        font-size: 2rem;
+    }
+    .icon-items .icon-item{
+        font-size: 3rem;
+    }
+    .bio-text{
+        font-size: 2rem;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************  Fin Nohaila (Page profile et parametre) ***************************************************/
+
+/***************************************************  Debut Salah (Page actualite et details) ***************************************************/
+
+
+
+
+
+
+
+
+/***************************************************  Fin Aymen (Page actualite et details) ***************************************************/
+
+/***************************************************  Debut Aymen (Page chat et groups) ***************************************************/
+
+
+
+
+
+
+
+
+/***************************************************  Fin Aymen (Page chat et group) ***************************************************/
+
+
+
+
+
+
 
 
 
