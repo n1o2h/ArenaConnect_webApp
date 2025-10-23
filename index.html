@@ -3,53 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARENA CONNECT WEB APPLICATION</title>
+    <title>ArenaConnect</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e53a9172bb.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* font */
+    @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+    </style>
 </head>
 <body>
-    
+    <!--Header Section-->
+    <header>
+        <nav>
+            <div id="LOGO"><a href="index.html" class="logo">Arena <span class="logoC">Connect</span></a></div>
+            <ul class="nav-list">
+                <li><a href="">Acceuil</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Acctualité</a></li>
+                <li><a href="">Chat</a></li>
+                <li><a href="">Groups</a></li>
+                <li><a id="Button-Connexion" href="">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Hero Section-->
+    <section class="hero-section">
+        <div id="hero-grid">
+            <div id="hero-section-maintext">
+                <h1>Trouvez votre communauté</h1>
+            </div>
+            <div id="hero-section-secondarytext">
+                <h2>Trouvez des amis et découvrez de vastes communautés d'e-sport.</h2>
+            </div>
+            <div style="align-content: center;">
+                <a href="groupes" id="hero-section-B1">Découvrez les Groupes</a>
+            </div>
+            <div style="align-content: center;">
+                <a href="acctualité" id="hero-section-B2">Derniéres nouvelles</a>
+            </div>
+        </div>
+    </section>
+    <!--About-->
+    <article id="about">
+        <div id="about-content">
+            <img src="assets/About.png">
+            <div id="about-text">
+                <h2 class="Ptitle">About</h2>
+                <p class="Ptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi.</p>           
+            </div>
+        </div>
+    </article>
+    <!--GamesList-->
+    <section id="gamelist">
+        <div id="gamelistBG">
+            <h2 class="Ptitle" style="text-align: center;">Trouvez votre communauté</h2>
+            <div id="gamelist-grid">
+                <img class="gamelist-game" src="assets/LOL.png">
+                <img class="gamelist-game" src="assets/Valorant.jpg">
+                <img class="gamelist-game" src="assets/CS2.jpeg">
+                <img class="gamelist-game" src="assets/Apex.jpg">
+            </div>
+        </div>
+    </section>
+    <!--Profile Edit-->
+    <section id="profileeditBG">
+        <div id="PEgrid1">
+            <div id="profile-preview-text">
+                <h2 class="Ptitle">Et personnalisez votre profil</h2>
+                <p class="Ptext">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium  tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.</p>
+            </div>
+            <div id="profile-preview">
+                <div>
+                    <img id="profile-preview-banner" src="assets/ProfileBanner.jpeg">
+                </div>
+                <div id="profile-preview-pfp">
+                    <img src="assets/PFP.gif"><span>Pablo</span>            
+                </div>
+                <div id="profile-preview-bio">
+                    <h2>Bio..</h2>
+                </div>
+                <div id="gameFav">
+                    <div class="gameFav"></div>
+                    <div class="gameFav"></div>
+                    <div class="gameFav"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <div id="footer-grid">
+            <div id="Finfo">
+                <h2>Arena <span>Connect</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+                <p>© 2025 GameForge, Inc. Tous droits réservés.</p>
+            </div>
+            <div class="sec-title">
+                <h3>Les Jeux</h3>
+                <div class="sec-content">
+                    <h4>League of Legends</h4>
+                    <h4>Apec Legends</h4>
+                    <h4>Valorant</H4>
+                    <h4>CS2</h4>
+                </div>
+            </div>
+            <div class="sec-title">
+                <h3>Navigation</h3>
+                <div class="sec-content">
+                       <h4>Acceuil</h4>
+                    <h4>Joueurs</h4>
+                    <h4>Profile</h4>
+                    <h4>Acctualité</h4>
+                    <h4>Chat</h4>
+                    <h4>Groups</h4>
+                </div>
+            </div>
+            <div class="sec-title">
+                <h3>Contact</h3>
+                <div class="sec-content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
-
-<!-- ***************************************************  Debut Aymen (Page accueil et connexion) *************************************************** -->
-
-
-
-
-
-
-
-
-<!-- /***************************************************  Fin Aymen (Page accueil et connexion) ***************************************************/ -->
-
-<!-- /***************************************************  Debut Nohaila (Page profile et parametre) ***************************************************/ -->
-
-
-
-
-
-
-
-
-<!-- /***************************************************  Fin Nohaila (Page profile et parametre) ***************************************************/ -->
-
-<!-- /***************************************************  Debut Salah (Page actualite et details) ***************************************************/ -->
-
-
-
-
-
-
-
-
-<!-- /***************************************************  Fin Aymen (Page actualite et details) ***************************************************/ -->
-
-<!-- /***************************************************  Debut Aymen (Page chat et groups) ***************************************************/ -->
-
-
-
-
-
-
-
-
-<!-- /***************************************************  Fin Aymen (Page chat et group) ***************************************************/ -->
