@@ -1,5 +1,4 @@
-/***************************************************  Debut Global /***************************************************/
-
+/****************************************  Debut Global /************************************/
 :root{
     --primary-color: #7CE9D1;
     --secondary-color: #87171B;
@@ -10,7 +9,10 @@
     --text-primary: #DCF9F2;
     --text-secondary: #373D3C;
     --gradient-button-1: linear-gradient(90deg, #7CE9D1 0%, rgba(124, 233, 209, 0.6) 100%);
-    
+    --gradient-image: linear-gradient(to top, #0000009a 50% ,transparent);
+    --color-enLigne: #1CD356;
+    --background-Color:#00000033;
+    --Third-color:#ffffff;
 } 
 
 *{
@@ -24,6 +26,8 @@ body{
     padding: 0px;
     background: var(--background-2);
 }
+
+/*******************************  Fin Global *********************************/
 
 /* Header section */
 
@@ -122,10 +126,9 @@ footer{
 }
 
 
-/***************************************************  Fin Global ***************************************************/
 
-/***************************************************  Debut Aymen (Page accueil et connexion) ***************************************************/
 
+/****************************  Debut Aymen (Page accueil et connexion) ****************************/
 /* Hero section */
 .hero-section{
     background: var(--background-1);
@@ -285,59 +288,442 @@ footer{
     align-content: end;
 }
 
+/*******************  Fin Aymen (Page Accueil et connexion & inscription) ************************/
 
+/***********************  Debut Nohaila (Page profile et parametre) *************************/
 
-
-
-
-
-
-/***************************************************  Fin Aymen (Page accueil et connexion) ***************************************************/
-
-/***************************************************  Debut Nohaila (Page profile et parametre) ***************************************************/
-
-
-
-
-
-
-
-
-/***************************************************  Fin Nohaila (Page profile et parametre) ***************************************************/
-
-/***************************************************  Debut Salah (Page actualite et details) ***************************************************/
-body {
-    margin: 0;
-    padding: 0;
-}
-
-header{
-    border: 2px dotted black;
-    height: 7vh;
-}
-
-header nav{
+ /* image  background */
+.hero-profile{
+    width: auto;
+    height: 200px;
+    background-image: var(--gradient-image), url(Images/backgroundProfile.png);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: grid;
-    margin-top: 10px;    
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "imageProfile  nomProfile  nomProfile parametre"
+    "imageProfile jeuFavori niveau parametre"
+    ;
+    place-items: center;
+    gap: 15px;
 }
 
-header nav>.liens-nav{
+ /* image  profile */
+
+.image-profile{
+    width: 80px;
+    height: 80px;
+    background-image: url(Images/imageProfile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    border: 2px solid var(--accent);
+    justify-self: end;
+    grid-area: imageProfile;
+}
+
+ /*  block d'Information personnel du profile */
+
+.hero-profile h2{
+    color: var(--text-primary);
+    grid-area:  nomProfile;
+    font-size: 1.3em;
+    font-weight: 700;
+    align-self: self-end;
+}
+.fa-circle{
+    color: var(--color-enLigne);
+    font-size: 0.3em;
+}
+.hero-profile p.jeu{
+    grid-area: jeuFavori;
+    align-self: self-start;
+    color: var(--text-primary);
+
+
+}
+.hero-profile p.niveau{
+    grid-area: niveau;
+    align-self: self-start;
+    color: var(--text-primary);
+
+
+}
+.parametre-icon{
+    
+    padding: 1rem;
+    grid-area: parametre;
+    align-self: self-start;
+    font-size: 1em;
+    justify-self: end;
+}
+.parametre-icon i{
+    color: #ffffff;
+}
+
+ /* social media  Bio */
+.bio-container{
+    width: 100%;
+    /* height: 200px; */
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    column-gap: 10px;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+    margin-bottom: 10px;
+}
+.social-media-icons{
+    padding: 20px;
+    background: var(--background-2);
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-around;
+    place-items: center;
+}
+.icon-item{
+    padding: 10px;
+    border-bottom: var(--accent) solid 3px;
+}
+.icon-item i{
+    font-size: 1.2em;
+    color: var(--accent);
+}
+.icon-item:hover{
+    border-radius: 8px;
+    box-shadow: 0 0 2px var(--accent);
+    transition: 0.5s  ease;
+}
 
+ /* citation du Bio */
+.bio-text{
+    border-radius: 8px;
+    width: 90%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    background: var(--background-Color);
+    box-shadow: 0 0 5px var(--Third-color);
+}
+.bio-text{
+    font-size: 0.8em;
+    font-weight: 300;
+    padding: 10px 5px;  
+    text-align: start;
+    font-style: italic;
+    color: var(--text-primary);
 
 }
-header nav>.liens-nav li{
-    list-style: none;
+ /* Les  cartes de jeux */
+.carts-jeux{
+    padding: 30px;
+    width: 100%;
+    height:2400px;
+    display: grid;
+    grid-template-rows:repeat(auto-fill, minmax(200px, auto)) ;
+    grid-template-columns:repeat(auto-fill,minmax(300px, auto)) ;
+    gap: 20px;
+    
+}
+.item1{
+    background-image: url(Images/jeu1.png);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows:repeat(1, 1fr) ;
+    align-items: end;
+    overflow: hidden;
+}
+.item2{
+    background-image: url(Images/jeu2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.item3{
+    background-image: url(Images/jeu3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.item4{
+    background-image: url(Images/jeu4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-header nav>.liens-nav a{
+.cart-item-jeu{
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows:repeat(1, 1fr) ;
+    align-items: end;
+    overflow: hidden;
+}
+.nonjeu{
+    width: 100%;
+    height: 50px;
+    background:var(--accent);
+    text-align: center;
+    padding: 15px;
+    font-weight: 900;
+    font-size: 1em;
+    color: var(--background-1);
+    display: none;
+}
+
+/* Media querie de la page profile  pour le mobile*/
+@media (width <  480px){
+    header{
+        display: none;
+    }
+    
+    .hero-profile{
+        padding: 30px;
+        height: 200px;
+    }
+    .image-profile{
+        width: 70px;
+        height: 70px;
+        gap: 20px;
+    }
+    .hero-profile h2{
+        font-size: 0.7rem;
+    }
+    .hero-profile .fa-circle{
+        font-size: 0.5rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 0.7rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 0.7rem;
+    }
+    .parametre-icon{
+        font-size: 1rem;
+        
+
+    }
+    .icon-items .icon-item{
+        font-size: 1rem;
+    }
+    .bio-text{
+        /* font-size: 1.3rem; */
+        display: none;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+    .container-buttons{
+        gap: 40px;
+        /* width: 100%; */
+        /* height: 500px; */
+        display: grid;
+        /* grid-template-columns: repeat(3, minmax(20px, auto)); */
+        /* grid-template-columns: repeat(1, minmax(20px, 1fr));
+        grid-template-rows: repeat(3, minmax(60px, 1fr)); */
+    }
+    /* .btn-form:nth-child(1){
+        grid-row: 1 /2;
+        grid-column: 1 / -1;
+    }
+    .btn-form:nth-child(2){
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+    }
+    .btn-form:nth-child(3){
+        grid-row: 3 / -1;
+        grid-column: 1 / -1;
+    } */
+}
+
+/* Media querie de la page profile  pour la tablet*/
+
+
+@media (width >= 760px){
+    .hero-profile{
+        padding: 30px;
+        height: 300px;
+    }
+    .image-profile{
+        width: 150px;
+        height: 150px;
+    }
+    .hero-profile h2{
+        font-size: 1.5rem;
+    }
+    .hero-profile .fa-circle{
+        font-size: 1rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 1.3rem;
+    }
+    .parametre-icon{
+        font-size: 2rem;
+        
+
+    }
+    .icon-items .icon-item{
+        font-size: 2rem;
+    }
+    .bio-text{
+        font-size: 1.3rem;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+}
+
+/* Media querie de la page profile  pour laptop*/
+@media (width >= 1200px){
+    .hero-profile{
+        padding: 30px;
+        height: 400px;
+    }
+    .image-profile{
+        width: 250px;
+        height: 250px;
+    }
+    .hero-profile h2{
+        font-size: 3rem;
+    }       
+    .hero-profile .fa-circle{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 1.5rem;
+    }
+    .parametre-icon{
+        font-size: 2rem;
+    
+
+    }
+    .icon-items .icon-item{
+        font-size: 3rem;
+    }
+    .bio-text{
+        font-size: 2rem;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+}
+
+/* Debut de la page parametre */
+.container-buttons{
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(60px, 1fr));
+    place-items: center;
+    background: var(--background-2);
+}
+.container-buttons a, .btn-form a{
+    
     text-decoration: none;
-    color: black;
+    color: var(--primary-color);
+}
+.btn-form{
+    border-radius: 5px;
+    padding:  10px  20px;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
 }
 
+.container-form{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.form-param{
+    width: 80%;
+    height: 400px;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    background-color: var(--background-1);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.input-cont{    
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.input-cont label{
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1rem;
+    
+}
+.input-cont input{
+    width: 60%;
+    height: 40px;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    background: var(--background-2);
+    color: var(--text-primary);
+}
+
+.input-cont input::placeholder{
+    color:#ffffff80;
+    padding: 10px;
+    font-size: 0.7rem;
+}
+.container-enregistrer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:  30px;
+}
+
+/* Fin de la page parametre */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************  Fin Nohaila (Page profile et parametre) ***************************/
+/*************************  Debut Salah (Page actualite et details) **********************/
 
 /* css pour le section actualite */
 
@@ -369,8 +755,6 @@ header nav>.liens-nav a{
     grid-column: 30px;
     margin-top: 50px;
     height: auto;
-
- 
 }
 
 .articles .article{
@@ -421,6 +805,164 @@ header nav>.liens-nav a{
     color: black;
 }
 
+/* media query pour la  page actualite pour le mobile */
+@media (max-width: 500px) {
+    .actualite-section h1{
+        font-size: 36px;
+        
+    }
+    .actualite-section hr{
+        width: 70px;
+    }
+    .actualite-section .articles{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* media query pour la  page actualite pour le tablettes */
+@media (min-width:481px) and (max-width: 768px) {
+    .actualite-section h1{
+        font-size: 46px;
+        
+    }
+    .actualite-section hr{
+        width: 80px;
+    }
+    .actualite-section .articles{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* css pour la page details  */
+
+.details-section{
+    display: grid;
+    justify-items: center;
+    background-color: #fff;
+    width: 100vw;
+    height: auto;
+    background-color: #081D19;
+    color: white;
+    
+}
+
+.details-section h1{
+    margin-top: 15vh;
+    justify-self: start;
+    margin-left: 30vh;
+    color: #DFD73A;
+    font-size:xx-large;
+    font-weight: 700;
+
+}
+
+.details-section .card-details{
+    text-align: center;
+    background-color: #03110F;
+    border-radius: 64px;
+    width: 70vw;
+    height: 70vh;
+    
+}
+
+.card-details h3{
+    font-size: 35px;
+    color: #DFD73A;
+}
+
+.card-details .contaniers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+.card-details .contaniers img{
+    width: 416px;
+    height: 263px;
+    border-radius: 60px;
+    
+
+}
+
+.card-details .contaniers p{
+    font-size: 15px;
+    line-height: 23px;
+}
+
+
+
+.card-details .commentaire label{
+    color: #DFD73A;
+    display: block;
+    justify-items: start;
+}
+
+
+
+.details-section .btn{
+    margin-top: 20px;
+    border: 1px solid #DFD73A;
+    box-shadow: 1px 1px 5px  #DFD73A;
+    border-radius: 12px;
+    width: 170px;
+    height: 40px;
+    justify-items: center;
+    position: relative;
+
+}
+
+
+
+/* css pour la page details partie designe mobile */
+
+@media (max-width:480px){
+    .details-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+    }
+
+    .details-section .card-details {
+        width: 95%;
+        max-width: 450px;
+        border-radius: 30px;
+        box-sizing: border-box;
+    }
+    .card-details h3 {
+        margin-top: 15px;
+        font-size: 25px;
+        order: 2;
+    }
+    .card-details .contaniers img{
+    width: 316px;
+    height: 163px;
+    border-radius: 30px;
+    order: 1;
+    }
+    .card-details .contaniers{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -456,7 +998,6 @@ header nav>.liens-nav a{
     margin-top: 50px;
     height: auto;
 
- 
 }
 
 .articles .article{
@@ -464,9 +1005,7 @@ header nav>.liens-nav a{
     height: 300px;
     border-radius: 64px;
     border: 1px solid black;
-    
-    
-    
+
 }
 
 .articles .article .article-header img{
@@ -603,7 +1142,6 @@ header nav>.liens-nav a{
     justify-content: space-around;
     padding-bottom: 22px;
     gap: 14px;
-    width: 900px;
 }
 
 .card-details .commentaire label{
@@ -613,23 +1151,13 @@ header nav>.liens-nav a{
 }
 
 .card-details .commentaire textarea{
-    width: 160%;
-    height: 10vh;
     color: white;
+    width: 400px;
    border-radius: 12px;
     background-color: var(--background-1);
   
 }
 
-.details-section .btn{
-    margin-top: 20px;
-    border: 1px solid var(--accent);
-    border-radius: 8px;
-    width: 200px;
-    height: 35px;
-    justify-items: center;
-
-}
 
 .details-section .btn a{
     display: grid;
@@ -639,7 +1167,7 @@ header nav>.liens-nav a{
     padding-top: 5px;
 }
 
-/* le media query par la page details   */
+/* le media query par la page details  pour le mobile */
 @media (max-width: 480px) {
 
     .details-section{
@@ -675,8 +1203,11 @@ header nav>.liens-nav a{
     .commentaire textarea{
       position: relative;
       grid-template-columns: 1fr;
-      margin-left: 0;
+      margin-left: 68px;
        
+    }
+    .commentaire label{
+        margin-left: 68px;
     }
 }
     /* media query de la page details pour les tablttes  */
@@ -730,85 +1261,12 @@ header nav>.liens-nav a{
    
 
 
+/*****************  Fin Salah (Page actualite et details) ***********************************/
+
+/******************************  Debut Aymen (Page chat et groups) ***********************/
 
 
 
-
-
-
-
-
-
-
-
-
-/***************************************************  Fin Aymen (Page actualite et details) ***************************************************/
-
-/***************************************************  Debut Aymen (Page chat et groups) ***************************************************/
-
-
-
-
-
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid gold;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.logo{
-    font-weight: bolder;
-    font-size: 24px;
-}
-
-.links{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-weight: bolder;
-}
-
-.links a{
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s ease-in;
-}
-
-.links a:hover{
-    opacity: 0.7;
-}
-
-.links a:active{
-    opacity: 0.7;
-}
-
-.links button{
-    font-weight: bolder;
-        border: none;
-    border-radius: 5px;
-    padding: 10px;
-    background: #00ffff;
-    color: #e82222;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-.links button:hover{
-    background-color: transparent;
-    border: 1px solid #00ffff;
-    color: #fff;
-}
-
-.logo{
-    color: #fff;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
 
 .menu{
     display: none;
@@ -1413,9 +1871,4 @@ section .container {
 }
 
 
-
-
-
-
-
-/***************************************************  Fin Aymen (Page chat et group) ***************************************************/
+/*****************************  Fin Aymen (Page chat et group) *********************************/
