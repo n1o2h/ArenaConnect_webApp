@@ -346,14 +346,14 @@ header nav>.liens-nav a{
     height: auto;
     text-align: center;
     padding-top: 20px;
-    background-color: #081D19;
+    background-color: var(--background-2);
 
 
 }
 
 .actualite-section h1{
     font-size: 56px;
-    color: #DFD73A;
+    color: var(--accent);
 }
 
 .actualite-section hr{
@@ -364,9 +364,8 @@ header nav>.liens-nav a{
     padding-top: 60px;
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    row-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
     grid-column: 30px;
     margin-top: 50px;
     height: auto;
@@ -391,7 +390,7 @@ header nav>.liens-nav a{
 }
 
 .articles .article .article-body h5{
-    color: #DFD73A;
+    color: var(--accent);
     font-size: large;
     text-align: start;
     margin-left: 20px;
@@ -408,8 +407,8 @@ header nav>.liens-nav a{
     width: 320px;
     height: 50px;
     border-radius: 0px 0px 64px 64px;
-    background: linear-gradient(to right, #7CE9D1 0%, rgba(124, 233, 209, 0.6) 100%);
-    box-shadow: 4px 4px 15px #7CE9D1;
+    background: linear-gradient(to right, var(--primary-color) 0%, rgba(124, 233, 209, 0.6) 100%);
+    box-shadow: 4px 4px 15px var(--primary-color);
     position: relative;
 }
 .articles .article .footer a{
@@ -422,181 +421,6 @@ header nav>.liens-nav a{
     color: black;
 }
 
-/* media query pour la  page actualite pour le mobile */
-@media (max-width: 500px) {
-    .actualite-section h1{
-        font-size: 36px;
-        
-    }
-    .actualite-section hr{
-        width: 70px;
-    }
-    .actualite-section .articles{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* media query pour la  page actualite pour le tablettes */
-@media (min-width:481px) and (max-width: 768px) {
-    .actualite-section h1{
-        font-size: 46px;
-        
-    }
-    .actualite-section hr{
-        width: 80px;
-    }
-    .actualite-section .articles{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* css pour la page details  */
-
-.details-section{
-    display: grid;
-    justify-items: center;
-    background-color: #fff;
-    width: 100vw;
-    height: auto;
-    background-color: #081D19;
-    color: white;
-    
-}
-
-.details-section h1{
-    margin-top: 15vh;
-    justify-self: start;
-    margin-left: 30vh;
-    color: #DFD73A;
-    font-size:xx-large;
-    font-weight: 700;
-
-}
-
-.details-section .card-details{
-    text-align: center;
-    background-color: #03110F;
-    border-radius: 64px;
-    width: 70vw;
-    height: 70vh;
-    
-}
-
-.card-details h3{
-    font-size: 35px;
-    color: #DFD73A;
-}
-
-.card-details .contaniers {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    
-}
-.card-details .contaniers img{
-    width: 416px;
-    height: 263px;
-    border-radius: 60px;
-    
-
-}
-
-.card-details .contaniers p{
-    font-size: 15px;
-    line-height: 23px;
-}
-
-.card-details .commentaire{
-    margin-top: -50px;
-     margin-left: 67px;
-}
-
-.card-details .commentaire label{
-    color: #DFD73A;
-    display: block;
-    justify-items: start;
-}
-
-.card-details .commentaire textarea{
-    margin-top: 4px;
-    margin-left: 300px;
-    width: 20vw;
-    height: 10vh;
-    background-color:#03110F;
-  
-}
-
-.details-section .btn{
-    margin-top: 20px;
-    border: 1px solid #DFD73A;
-    box-shadow: 1px 1px 5px  #DFD73A;
-    border-radius: 12px;
-    width: 170px;
-    height: 40px;
-    justify-items: center;
-    position: relative;
-
-}
-
-.details-section .btn a{
-    text-decoration: none;
-    color: white;
-    position: relative;
-    font-size: large;
-    left: 60px;
-    top: 9px;
-}
-
-/* css pour la page details partie designe mobile */
-
-@media (max-width:480px){
-    .details-section {
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-items: center;
-        padding: 0 10px;
-        box-sizing: border-box;
-       
-    }
-
-    .details-section .card-details {
-        width: 95%;
-        max-width: 450px;
-        border-radius: 30px;
-        box-sizing: border-box;
-    }
-    .card-details h3 {
-        margin-top: 15px;
-        font-size: 25px;
-        order: 2;
-    }
-    .card-details .contaniers img{
-    width: 316px;
-    height: 163px;
-    border-radius: 30px;
-    order: 1;
-    }
-     .card-details .contaniers{
-        display: grid;
-        grid-template-columns: 1fr;
-        row-gap: 15px;
-    }
-   
-
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -608,14 +432,14 @@ header nav>.liens-nav a{
     height: auto;
     text-align: center;
     padding-top: 20px;
-    background-color: #081D19;
+    background-color: var(--background-2);
 
 
 }
 
 .actualite-section h1{
     font-size: 56px;
-    color: #DFD73A;
+    color: var(--accent);
 }
 
 .actualite-section hr{
@@ -626,7 +450,8 @@ header nav>.liens-nav a{
     padding-top: 60px;
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fit, auto);
     row-gap: 5rem;
     margin-top: 50px;
     height: auto;
@@ -654,7 +479,7 @@ header nav>.liens-nav a{
 }
 
 .articles .article .article-body h5{
-    color: #DFD73A;
+    color: var(--accent);
     font-size: large;
     text-align: start;
     margin-left: 20px;
@@ -671,7 +496,7 @@ header nav>.liens-nav a{
     width: 320px;
     height: 50px;
     border-radius: 0px 0px 64px 64px;
-    background: linear-gradient(to right, #7CE9D1 0%, rgba(124, 233, 209, 0.6) 100%);
+    background: linear-gradient(to right, var(--primary-color) 0%, rgba(124, 233, 209, 0.6) 100%);
     filter: drop-shadow(2px 2px 10px rgba(124, 233, 209, 0.6));
     position: relative;
 }
@@ -685,15 +510,43 @@ header nav>.liens-nav a{
     color: black;
 }
 
+
+
+/*media query pour le la page actualite pour le mobile    */
+@media (max-width : 480px) {
+    
+    .actualite-section {
+         width: 141vw;
+    }
+    .actualite-section h1{
+        font-size: 27px;
+        
+    }
+    .actualite-section hr{
+        width: 70px;
+    }
+    .actualite-section .articles{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+/*media query pour le la page actualite pour les tablettes    */
+@media (min-width : 481px) and (max-width : 768px){
+    .actualite-section .articles{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
 /* css pour la page details  */
 
 .details-section{
-    display: grid;
     justify-items: center;
     background-color: #fff;
     width: 100vw;
     height: auto;
-    background-color: #081D19;
+    background-color: var(--background-2);
     color: white;
     
 }
@@ -702,7 +555,7 @@ header nav>.liens-nav a{
     margin-top: 15vh;
     justify-self: start;
     margin-left: 30vh;
-    color: #DFD73A;
+    color: var(--accent);
     font-size:xx-large;
     font-weight: 700;
 
@@ -710,21 +563,22 @@ header nav>.liens-nav a{
 
 .details-section .card-details{
     text-align: center;
-    background-color: #03110F;
+    background-color: var(--background-1);
     border-radius: 64px;
     width: 70vw;
-    height: 70vh;
+    height: auto;
     
 }
 
 .card-details h3{
     font-size: 35px;
-    color: #DFD73A;
+    color: var(--accent);
 }
 
 .card-details .contaniers {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     
 }
 .card-details .contaniers img{
@@ -732,49 +586,148 @@ header nav>.liens-nav a{
     height: 263px;
     border-radius: 60px;
     
+    
 
 }
 
 .card-details .contaniers p{
     font-size: 15px;
     line-height: 23px;
+    text-align: start;
+   
 }
 
 .card-details .commentaire{
-    margin-top: -50px;
-     margin-left: 67px;
+    display: grid;
+    justify-items: start;
+    justify-content: space-around;
+    padding-bottom: 22px;
+    gap: 14px;
+    width: 900px;
 }
 
 .card-details .commentaire label{
-    color: #DFD73A;
+    color: var(--accent);
     display: block;
     justify-items: start;
 }
 
 .card-details .commentaire textarea{
-    margin-top: 4px;
-    margin-left: 300px;
-    width: 20vw;
+    width: 160%;
     height: 10vh;
-    background-color:#03110F;
+    color: white;
+   border-radius: 12px;
+    background-color: var(--background-1);
   
 }
 
 .details-section .btn{
     margin-top: 20px;
-    border: 2px solid #DFD73A;
+    border: 1px solid var(--accent);
     border-radius: 8px;
-    width: 100px;
-    height: 30px;
+    width: 200px;
+    height: 35px;
     justify-items: center;
 
 }
 
 .details-section .btn a{
+    display: grid;
     text-decoration: none;
     color: white;
-    justify-self: center;
+    justify-content: center;
+    padding-top: 5px;
 }
+
+/* le media query par la page details   */
+@media (max-width: 480px) {
+
+    .details-section{
+        display: grid;
+        width: 680px;
+        height: auto;
+        
+     
+    
+    }
+    .details-section .card-details {
+        width: 490px;
+        align-self: center
+    }
+    .card-details .contaniers{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .card-details .contaniers p{
+        width: 80%;
+        line-height: 29px;
+        text-align: start;
+        justify-self: center;
+    }
+
+    .card-details .commentaire{
+        margin-top: 35px;
+        margin-left: -39px;
+        width: 100%;    
+    }
+ 
+    .commentaire textarea{
+      position: relative;
+      grid-template-columns: 1fr;
+      margin-left: 0;
+       
+    }
+}
+    /* media query de la page details pour les tablttes  */
+    
+@media (min-width : 481px) and (max-width : 768px){
+       .details-section{
+        display: grid;
+        width: 100vw;
+        align-self: center;
+        height: auto;
+    }
+      .details-section .card-details {
+        width: 100%;
+        align-self: center;
+    }
+     .card-details .contaniers{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 80%;
+        justify-self: center;
+    }
+
+    .card-details .contaniers img{
+        width: 80%;
+    }
+    .card-details .contaniers p{
+        line-height: 30px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .card-details .commentaire textarea{
+        width: 600px;
+        height: 100px;
+     
+    }
+    .details-section .btn{
+        display: flex;
+        height: 55px;
+        justify-content: center;
+    }
+    .details-section .btn a{
+        font-size: 25px;
+        align-items: center;
+        justify-content: center;
+       
+    }
+
+}
+    
+
+   
 
 
 
