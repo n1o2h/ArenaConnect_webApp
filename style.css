@@ -296,7 +296,7 @@ footer{
 .hero-profile{
     width: auto;
     height: 200px;
-    background-image: var(--gradient-image), url(Images/backgroundProfile.png);
+    background-image: var(--gradient-image), url(assets/backgroundProfile.png);
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     background-repeat: no-repeat;
@@ -318,7 +318,7 @@ footer{
 .image-profile{
     width: 80px;
     height: 80px;
-    background-image: url(Images/imageProfile.png);
+    background-image: url(assets/imageProfile.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -429,7 +429,7 @@ footer{
     
 }
 .item1{
-    background-image: url(Images/jeu1.png);
+    background-image: url(assets/jeu1.png);
     
     background-repeat: no-repeat;
     background-size: cover;
@@ -440,19 +440,19 @@ footer{
     overflow: hidden;
 }
 .item2{
-    background-image: url(Images/jeu2.png);
+    background-image: url(assets/jeu2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .item3{
-    background-image: url(Images/jeu3.png);
+    background-image: url(assets/jeu3.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .item4{
-    background-image: url(Images/jeu4.png);
+    background-image: url(assets/jeu4.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -482,151 +482,6 @@ footer{
     display: none;
 }
 
-/* Media querie de la page profile  pour le mobile*/
-@media (width <  480px){
-    header{
-        display: none;
-    }
-    
-    .hero-profile{
-        padding: 30px;
-        height: 200px;
-    }
-    .image-profile{
-        width: 70px;
-        height: 70px;
-        gap: 20px;
-    }
-    .hero-profile h2{
-        font-size: 0.7rem;
-    }
-    .hero-profile .fa-circle{
-        font-size: 0.5rem;
-    }
-    .hero-profile p.jeu{
-        font-size: 0.7rem;
-    }
-    .hero-profile p.niveau{
-        font-size: 0.7rem;
-    }
-    .parametre-icon{
-        font-size: 1rem;
-        
-
-    }
-    .icon-items .icon-item{
-        font-size: 1rem;
-    }
-    .bio-text{
-        /* font-size: 1.3rem; */
-        display: none;
-    }
-    
-    .carts-jeux{
-        margin-top: 30px;
-    }
-    .container-buttons{
-        gap: 40px;
-        /* width: 100%; */
-        /* height: 500px; */
-        display: grid;
-        /* grid-template-columns: repeat(3, minmax(20px, auto)); */
-        /* grid-template-columns: repeat(1, minmax(20px, 1fr));
-        grid-template-rows: repeat(3, minmax(60px, 1fr)); */
-    }
-    /* .btn-form:nth-child(1){
-        grid-row: 1 /2;
-        grid-column: 1 / -1;
-    }
-    .btn-form:nth-child(2){
-        grid-row: 2 / 3;
-        grid-column: 1 / -1;
-    }
-    .btn-form:nth-child(3){
-        grid-row: 3 / -1;
-        grid-column: 1 / -1;
-    } */
-}
-
-/* Media querie de la page profile  pour la tablet*/
-
-
-@media (width >= 760px){
-    .hero-profile{
-        padding: 30px;
-        height: 300px;
-    }
-    .image-profile{
-        width: 150px;
-        height: 150px;
-    }
-    .hero-profile h2{
-        font-size: 1.5rem;
-    }
-    .hero-profile .fa-circle{
-        font-size: 1rem;
-    }
-    .hero-profile p.jeu{
-        font-size: 1.5rem;
-    }
-    .hero-profile p.niveau{
-        font-size: 1.3rem;
-    }
-    .parametre-icon{
-        font-size: 2rem;
-        
-
-    }
-    .icon-items .icon-item{
-        font-size: 2rem;
-    }
-    .bio-text{
-        font-size: 1.3rem;
-    }
-    
-    .carts-jeux{
-        margin-top: 30px;
-    }
-}
-
-/* Media querie de la page profile  pour laptop*/
-@media (width >= 1200px){
-    .hero-profile{
-        padding: 30px;
-        height: 400px;
-    }
-    .image-profile{
-        width: 250px;
-        height: 250px;
-    }
-    .hero-profile h2{
-        font-size: 3rem;
-    }       
-    .hero-profile .fa-circle{
-        font-size: 1.5rem;
-    }
-    .hero-profile p.jeu{
-        font-size: 1.5rem;
-    }
-    .hero-profile p.niveau{
-        font-size: 1.5rem;
-    }
-    .parametre-icon{
-        font-size: 2rem;
-    
-
-    }
-    .icon-items .icon-item{
-        font-size: 3rem;
-    }
-    .bio-text{
-        font-size: 2rem;
-    }
-    
-    .carts-jeux{
-        margin-top: 30px;
-    }
-}
 
 /* Debut de la page parametre */
 .container-buttons{
@@ -634,6 +489,8 @@ footer{
     height: 100px;
     display: grid;
     grid-template-columns: repeat(3, minmax(60px, 1fr));
+    /* grid-template-columns: repeat(1, minmax(20px, 1fr)); */
+
     place-items: center;
     background: var(--background-2);
 }
@@ -648,6 +505,7 @@ footer{
     font-size: 1rem;
     border: 2px solid var(--primary-color);
     cursor: pointer;
+    
 }
 
 .container-form{
@@ -703,22 +561,156 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:  30px;
+    gap: 30px;
 }
 
 /* Fin de la page parametre */
 
+/* Media querie de la page profile  et parametre pour le mobile*/
+@media (max-width:480px){
+    .hero-profile{
+        padding: 30px;
+        height: 200px;
+    }
+    .image-profile{
+        width: 70px;
+        height: 70px;
+        gap: 20px;
+    }
+    .hero-profile h2{
+        font-size: 0.7rem;
+    }
+    .hero-profile .fa-circle{
+        font-size: 0.5rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 0.7rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 0.7rem;
+    }
+    .parametre-icon{
+        font-size: 1rem;
+        
+
+    }
+    .icon-items .icon-item{
+        font-size: 1rem;
+    }
+    .bio-text{
+        /* font-size: 1.3rem; */
+        display: none;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+    .container-buttons{
+        gap: 30px;
+        width: 80%;
+        padding: 0 30px;
+        
+    }
+    .container-buttons .btn-form{
+        padding: 5px 10px;
+    }
+    .container-buttons .btn-form a{
+        font-size: 0.8rem;
+    }
+    
+}
+
+/* Media querie de la page profile et parametre pour la tablet*/
 
 
+@media   (min-width : 481px) and (max-width : 768px){
+    .hero-profile{
+        padding: 30px;
+        height: 300px;
+    }
+    .image-profile{
+        width: 150px;
+        height: 150px;
+    }
+    .hero-profile h2{
+        font-size: 1.5rem;
+    }
+    .hero-profile .fa-circle{
+        font-size: 1rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 1.3rem;
+    }
+    .parametre-icon{
+        font-size: 1.5rem;
+        
 
+    }
+    .icon-items .icon-item{
+        font-size: 2rem;
+    }
+    .bio-text{
+        font-size: 1.3rem;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+    .container-buttons{
+        gap: 20px;
+        width: 90%;
+        padding: 0 30px;
+        
+    }
+    .container-buttons .btn-form{
+        padding: 10px 15px;
+    }
+    .container-buttons .btn-form a{
+        font-size: 0.9rem;
+    }
+}
 
+/* Media querie de la page profile  et paremetre  pour laptop*/
+@media (min-width >=  769px) and (max-width >= 1200px ){
+    .hero-profile{
+        padding: 30px;
+        height: 400px;
+    }
+    .image-profile{
+        width: 250px;
+        height: 250px;
+    }
+    .hero-profile h2{
+        font-size: 3rem;
+    }       
+    .hero-profile .fa-circle{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 1.5rem;
+    }
+    .parametre-icon{
+        font-size: 2rem;
+    
 
-
-
-
-
-
-
+    }
+    .icon-items .icon-item{
+        font-size: 3rem;
+    }
+    .bio-text{
+        font-size: 2rem;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+}
 
 
 
@@ -773,7 +765,7 @@ footer{
     background-position: center;
 }
 
-.articles .article .article-body h5{
+.articles .article .article-body h2{
     color: var(--accent);
     font-size: large;
     text-align: start;
@@ -1015,7 +1007,7 @@ footer{
     background-position: center;
 }
 
-.articles .article .article-body h5{
+.articles .article .article-body h2{
     color: var(--accent);
     font-size: large;
     text-align: start;
@@ -1422,6 +1414,7 @@ footer{
     font-size: 16px;
     background-color: rgba(8, 29, 25, 1);
     border: 2px solid gold;
+    color: var(--text-primary);
 }
 
 .send-btn {
@@ -1542,6 +1535,7 @@ footer h3{
     outline: none;
     font-size: 16px;
     background-color: transparent;
+    color: var(--text-primary);
 }
 
 .search-bar{
