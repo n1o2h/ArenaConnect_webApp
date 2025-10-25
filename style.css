@@ -1663,7 +1663,7 @@ section .container {
     border-radius: 25px;
 }
 .card-header {
-    background-image: url("frame.jpg");
+    background-image: url("assets/frame.jpg");
     background-position: center;
     height: 160px;
     border-top-left-radius: 25px;
