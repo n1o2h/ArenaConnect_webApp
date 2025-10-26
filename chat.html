@@ -11,25 +11,26 @@
     <title>ARENA CONNECT WEB APPLICATION</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e53a9172bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <style>
         /* font */
     @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
     </style>
-    <title>Chat - E-ARENA</title>
+
 </head>
 <body>
     <div class="modal-connnexion" id="loginModal">
         <div class="modal-content">
-            <form action="">
+            <form action="#formulaire">
                 <div class="modal-header">
                     <h2>Connexion</h2>
                     <i class="bi bi-x-lg" id="close" onclick="closeModal()"></i>
                 </div>
-                <label for="email">Email</label>
+                <label >Email</label>
                 <input type="email" placeholder="Entrez votre email" required>
                 
-                <label for="password">Mot de passe</label>
+                <label >Mot de passe</label>
                 <input type="password" placeholder="Entrez votre mot de passe" required>
                 
                 <p>Pas encore de compte ? <a href="#" onclick="displaySignUpForm()">Créer un compte</a></p>
@@ -39,18 +40,18 @@
     </div>
     <div class="modal-inscription" id="signUpModal">
         <div class="modal-content">
-            <form action="">
+            <form action="#fomrulaire">
                 <div class="modal-header">
                     <h2>Inscription</h2>
                     <i class="bi bi-x-lg" id="close" onclick="closeModal()"></i>
                 </div>
-                <label for="Nom">Nom</label>
-                <input type="Nom" placeholder="Entrez votre Nom" required>
+                <label >Nom</label>
+                <input type="text" placeholder="Entrez votre Nom" required>
 
-                <label for="email">Email</label>
+                <label >Email</label>
                 <input type="email" placeholder="Entrez votre email" required>
                 
-                <label for="password">Mot de passe</label>
+                <label >Mot de passe</label>
                 <input type="password" placeholder="Entrez votre mot de passe" required>
                 <button type="submit">Sign Up</button>
             </form>
@@ -66,7 +67,7 @@
                 <li><a href="actualite.html">Actualité</a></li>
                 <li><a href="chat.html">Chat</a></li>
                 <li><a href="groups.html">Groups</a></li>
-                <li><a id="Button-Connexion" href="">Connexion</a></li>
+                <li><a id="Button-Connexion" style="cursor: pointer;" onclick="displayModal()">Connexion</a></li>
             </ul>
         </nav>
     </header>
@@ -102,7 +103,7 @@
             <div class="conversations-container">
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -111,18 +112,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
-                        <div class="snippet">
-                            <div class="name">Aymen</div>
-                            <div class="last-message">Last Notification</div>
-                        </div>
-
-                    </div>
-                    <div class="conversation-message"></div>
-                </div>
-                <div class="conversation">
-                    <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -133,7 +123,18 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
+                        <div class="snippet">
+                            <div class="name">Aymen</div>
+                            <div class="last-message">Last Notification</div>
+                        </div>
+
+                    </div>
+                    <div class="conversation-message"></div>
+                </div>
+                <div class="conversation">
+                    <div class="profile-section" onclick="displayMessage()">
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -144,7 +145,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -154,7 +155,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -165,7 +166,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -176,7 +177,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -187,7 +188,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -198,7 +199,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -208,7 +209,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -219,7 +220,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -230,7 +231,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -241,7 +242,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -252,7 +253,7 @@
                 </div>
                 <div class="conversation">
                     <div class="profile-section" onclick="displayMessage()">
-                        <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                        <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                         <div class="snippet">
                             <div class="name">Aymen</div>
                             <div class="last-message">Last Notification</div>
@@ -267,7 +268,7 @@
                 <div id="return-btn">
                     <button onclick="displayConversationBar()"><i class="bi bi-arrow-left"></i></button>
                 </div>
-                <div class="image"><img src="Screenshot 2025-10-10 072610.png" alt=""></div>
+                <div class="image"><img src="assets/profilechat.png" alt="image profile"></div>
                 <div class="snippet">
                     <div class="name" style="color: #fff;">Aymen</div>
                     <div class="last-message" style="color: green;">Wrting ...</div>

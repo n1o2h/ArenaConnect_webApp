@@ -20,11 +20,12 @@
     font-weight: normal;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
 body{
     margin: 0px;
     padding: 0px;
-    background: var(--background-2);
+    background: var(--background-1);
 }
 
 /*******************************  Fin Global *********************************/
@@ -71,6 +72,7 @@ nav{
     margin-right: 1rem;
     align-content: center;
     list-style: none;
+    gap: 1rem;
 
 }
 .nav-list a{
@@ -124,19 +126,35 @@ footer{
     font-size: 14px;
     color: var(--text-primary);
 }
+.social-media{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 15px;
+}
 
 
+.social-media i{
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    background-color: #524917;
+    color: var(--accent);
+}
+
+/***************************************************  Fin Global ***************************************************/
 
 
 /****************************  Debut Aymen (Page accueil et connexion) ****************************/
 /* Hero section */
 .hero-section{
-    background: var(--background-1);
+    background-image: url(assets/Hero.webp);
 }
 #hero-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     padding: 8rem;
 }
 #hero-section-maintext{
@@ -146,58 +164,67 @@ footer{
     font-size: 44px;
     color: var(--text-primary);
 }
+#hero-section-maintext h1{
+    margin: auto ;
+}
 #hero-section-secondarytext{
     grid-column: span 2;
     text-align: center;
     font-weight: bolder;
     font-size: 20px;
     color: var(--text-primary);
+    margin: auto;
 }
 #hero-section-B1{
-    align-content: center;
     background: var(--gradient-button-1);
     color: var(--secondary-color);
-    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    padding: 1% ;
     border-radius: 8px;
     text-decoration: none;
     filter: drop-shadow(2px 2px 10px rgba(124, 233, 209, 0.6));
-    margin-left: 18rem;
+    margin: 1rem;
 }
 #hero-section-B2{
-    align-items: center;
     background: transparent;
     color: var(--primary-color);
-    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    padding: 1%;
     border: 2px solid var(--primary-color);
     border-radius: 8px;
     text-decoration: none;
-    margin-left: 12rem;
+    margin: 1rem;
+    
+
+}
+#hero-section-B-align{
+    grid-column: span 2;
+    align-content: center;
+    text-align: center;
 }
 
 /* About section */
 #about{
     background: var(--background-2);
+    padding: 5%;
 }
 #about-content{
-    padding: 5rem;
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 32px;
+    grid-template-columns: auto auto;
+    
 }
 #about-content img{
-    max-width: 750px;
+    max-width: 80%;
 }
 #about-text{
     align-content: end;
 }
 .Ptitle{
     font-weight: bolder;
-    font-size: 48px;
+    font-size: 3vw;
     color: var(--accent);
 }
 .Ptext{
     font-weight: bold;
-    font-size: 32px;
+    font-size: 1.5vw;
     color: var(--text-primary);
 }
 
@@ -215,12 +242,13 @@ footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);   
     margin: 3rem;
+    gap: 1rem;
 }
 .gamelist-game{
     border: 2px solid var(--accent);
     border-radius: 8px;
-    width: 300px;
-    height: 200px;
+    max-width: 18vw;
+    max-height: 10vw;
 }
 
 /* ProfileEdit */
@@ -231,44 +259,46 @@ footer{
 #PEgrid1{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: end;
 }
 #profile-preview{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     background: var(--background-1);
-    width: 700px;
-    height: 800px;
+    width: 90%;
+    height: 80%;
     border: 2px solid var(--accent);
     border-radius: 16px;
 }
 #profile-preview-banner{
-    height: 300px;
-    width: 696px;
+    max-height: 100%;
+    max-width: 100%;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 }
 #profile-preview-pfp img{
     border: 2px solid var(--accent);
     border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    max-width: 30%;
+    max-height: 70%;
     margin-left: 1rem;
     display: block;
 }
 #profile-preview-pfp span{
     margin-left: 1rem;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 3vw;
     color: var(--text-primary);
 }
 #profile-preview-bio{
     background: var(--background-3);
     border-radius: 8px;
     margin: 2rem;
+    max-width: 33vw;
 }
 #profile-preview-bio h2{
     font-weight: bold;
-    font-size: 32px;
+    font-size: 2vw;
     color: var(--text-primary);
     margin: 1rem;
 }
@@ -276,17 +306,80 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0.5rem 2rem 1rem 2rem;
+    gap: 5%;
 }
 .gameFav{
     background: var(--secondary-color);
     border-radius: 50px;
-    width: 150px;
-    height: 60px;
+    width: auto;
+    height: 5vh;
 }
 #profile-preview-text{
     margin: 2rem;
     align-content: end;
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+    .Ptext{
+        font-size: 2vw;
+    }
+    #gamelist-grid{
+        margin: 1rem;
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width: 480px){
+    /* hero */
+    #hero-grid{
+    display: grid;
+        padding: 2rem;
+    }
+    #hero-section-maintext{
+        font-size: 18px;
+    }
+    #hero-section-secondarytext{
+        font-size: 12px;
+    }
+    /* about */
+    #about-content{
+        grid-template-columns: auto;
+        justify-items: center;
+    }
+    
+    .Ptitle{
+        font-size: 5vw;
+        text-align: center;
+    }
+    .Ptext{
+        font-size: 3vw;
+        text-align: center;
+    }
+    /* gamelist */
+    #gamelist{
+        padding: 2rem;
+    }
+    #gamelist-grid{
+        grid-template-columns: auto;
+    }
+    .gamelist-game{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    #PEgrid1{
+        grid-template-columns: auto;
+        justify-items: center;
+    }
+    #profile-preview-bio{
+        max-width: 100%;
+    }
+    #profile-preview-bio h2{
+        font-size: 3vw;
+    }
+    /* footer */
+    #footer-grid{
+        grid-template-columns: auto ;
+    }
 
 /*******************  Fin Aymen (Page Accueil et connexion & inscription) ************************/
 
@@ -296,7 +389,7 @@ footer{
 .hero-profile{
     width: auto;
     height: 200px;
-    background-image: var(--gradient-image), url(Images/backgroundProfile.png);
+    background-image: var(--gradient-image), url(assets/ProfileBanner.webp);
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     background-repeat: no-repeat;
@@ -318,7 +411,7 @@ footer{
 .image-profile{
     width: 80px;
     height: 80px;
-    background-image: url(Images/imageProfile.png);
+    background-image: url(assets/PFP.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -429,7 +522,7 @@ footer{
     
 }
 .item1{
-    background-image: url(Images/jeu1.png);
+    background-image: url(assets/CS2.webp);
     
     background-repeat: no-repeat;
     background-size: cover;
@@ -440,19 +533,19 @@ footer{
     overflow: hidden;
 }
 .item2{
-    background-image: url(Images/jeu2.png);
+    background-image: url(assets/Valorant.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .item3{
-    background-image: url(Images/jeu3.png);
+    background-image: url(assets/LOL.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .item4{
-    background-image: url(Images/jeu4.png);
+    background-image: url(assets/Apex.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -482,151 +575,6 @@ footer{
     display: none;
 }
 
-/* Media querie de la page profile  pour le mobile*/
-@media (width <  480px){
-    header{
-        display: none;
-    }
-    
-    .hero-profile{
-        padding: 30px;
-        height: 200px;
-    }
-    .image-profile{
-        width: 70px;
-        height: 70px;
-        gap: 20px;
-    }
-    .hero-profile h2{
-        font-size: 0.7rem;
-    }
-    .hero-profile .fa-circle{
-        font-size: 0.5rem;
-    }
-    .hero-profile p.jeu{
-        font-size: 0.7rem;
-    }
-    .hero-profile p.niveau{
-        font-size: 0.7rem;
-    }
-    .parametre-icon{
-        font-size: 1rem;
-        
-
-    }
-    .icon-items .icon-item{
-        font-size: 1rem;
-    }
-    .bio-text{
-        /* font-size: 1.3rem; */
-        display: none;
-    }
-    
-    .carts-jeux{
-        margin-top: 30px;
-    }
-    .container-buttons{
-        gap: 40px;
-        /* width: 100%; */
-        /* height: 500px; */
-        display: grid;
-        /* grid-template-columns: repeat(3, minmax(20px, auto)); */
-        /* grid-template-columns: repeat(1, minmax(20px, 1fr));
-        grid-template-rows: repeat(3, minmax(60px, 1fr)); */
-    }
-    /* .btn-form:nth-child(1){
-        grid-row: 1 /2;
-        grid-column: 1 / -1;
-    }
-    .btn-form:nth-child(2){
-        grid-row: 2 / 3;
-        grid-column: 1 / -1;
-    }
-    .btn-form:nth-child(3){
-        grid-row: 3 / -1;
-        grid-column: 1 / -1;
-    } */
-}
-
-/* Media querie de la page profile  pour la tablet*/
-
-
-@media (width >= 760px){
-    .hero-profile{
-        padding: 30px;
-        height: 300px;
-    }
-    .image-profile{
-        width: 150px;
-        height: 150px;
-    }
-    .hero-profile h2{
-        font-size: 1.5rem;
-    }
-    .hero-profile .fa-circle{
-        font-size: 1rem;
-    }
-    .hero-profile p.jeu{
-        font-size: 1.5rem;
-    }
-    .hero-profile p.niveau{
-        font-size: 1.3rem;
-    }
-    .parametre-icon{
-        font-size: 2rem;
-        
-
-    }
-    .icon-items .icon-item{
-        font-size: 2rem;
-    }
-    .bio-text{
-        font-size: 1.3rem;
-    }
-    
-    .carts-jeux{
-        margin-top: 30px;
-    }
-}
-
-/* Media querie de la page profile  pour laptop*/
-@media (width >= 1200px){
-    .hero-profile{
-        padding: 30px;
-        height: 400px;
-    }
-    .image-profile{
-        width: 250px;
-        height: 250px;
-    }
-    .hero-profile h2{
-        font-size: 3rem;
-    }       
-    .hero-profile .fa-circle{
-        font-size: 1.5rem;
-    }
-    .hero-profile p.jeu{
-        font-size: 1.5rem;
-    }
-    .hero-profile p.niveau{
-        font-size: 1.5rem;
-    }
-    .parametre-icon{
-        font-size: 2rem;
-    
-
-    }
-    .icon-items .icon-item{
-        font-size: 3rem;
-    }
-    .bio-text{
-        font-size: 2rem;
-    }
-    
-    .carts-jeux{
-        margin-top: 30px;
-    }
-}
 
 /* Debut de la page parametre */
 .container-buttons{
@@ -634,6 +582,8 @@ footer{
     height: 100px;
     display: grid;
     grid-template-columns: repeat(3, minmax(60px, 1fr));
+    /* grid-template-columns: repeat(1, minmax(20px, 1fr)); */
+
     place-items: center;
     background: var(--background-2);
 }
@@ -648,6 +598,7 @@ footer{
     font-size: 1rem;
     border: 2px solid var(--primary-color);
     cursor: pointer;
+    
 }
 
 .container-form{
@@ -703,24 +654,158 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:  30px;
+    gap: 30px;
 }
 
 /* Fin de la page parametre */
 
+/* Media querie de la page profile  et parametre pour le mobile*/
+@media (max-width:480px){
+    .hero-profile{
+        padding: 30px;
+        height: 200px;
+    }
+    .image-profile{
+        width: 70px;
+        height: 70px;
+        gap: 20px;
+    }
+    .hero-profile h2{
+        font-size: 0.7rem;
+    }
+    .hero-profile .fa-circle{
+        font-size: 0.5rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 0.7rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 0.7rem;
+    }
+    .parametre-icon{
+        font-size: 1rem;
+        
+
+    }
+    .icon-items .icon-item{
+        font-size: 1rem;
+    }
+    .bio-text{
+        /* font-size: 1.3rem; */
+        display: none;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+    .container-buttons{
+        gap: 30px;
+        width: 80%;
+        padding: 0 30px;
+        
+    }
+    .container-buttons .btn-form{
+        padding: 5px 10px;
+    }
+    .container-buttons .btn-form a{
+        font-size: 0.8rem;
+    }
+    
+}
+
+/* Media querie de la page profile et parametre pour la tablet*/
 
 
+@media   (min-width : 481px) and (max-width : 768px){
+    .hero-profile{
+        padding: 30px;
+        height: 300px;
+    }
+    .image-profile{
+        width: 150px;
+        height: 150px;
+    }
+    .hero-profile h2{
+        font-size: 1.5rem;
+    }
+    .hero-profile .fa-circle{
+        font-size: 1rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 1.3rem;
+    }
+    .parametre-icon{
+        font-size: 1.5rem;
+        
 
+    }
+    .icon-items .icon-item{
+        font-size: 2rem;
+    }
+    .bio-text{
+        font-size: 1.3rem;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+    .container-buttons{
+        gap: 20px;
+        width: 90%;
+        padding: 0 30px;
+        
+    }
+    .container-buttons .btn-form{
+        padding: 10px 15px;
+    }
+    .container-buttons .btn-form a{
+        font-size: 0.9rem;
+    }
+}
 
+/* Media querie de la page profile  et paremetre  pour laptop*/
+@media (min-width >=  769px) and (max-width >= 1200px ){
+    .hero-profile{
+        padding: 30px;
+        height: 400px;
+    }
+    .image-profile{
+        width: 250px;
+        height: 250px;
+    }
+    .hero-profile h2{
+        font-size: 3rem;
+    }       
+    .hero-profile .fa-circle{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 1.5rem;
+    }
+    .parametre-icon{
+        font-size: 2rem;
+    
 
+    }
+    .icon-items .icon-item{
+        font-size: 3rem;
+    }
+    .bio-text{
+        font-size: 2rem;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+}
 
-
-
-
-
-
-
-
+}
 
 /*********************  Fin Nohaila (Page profile et parametre) ***************************/
 /*************************  Debut Salah (Page actualite et details) **********************/
@@ -768,12 +853,12 @@ footer{
     width: 320px;
     height: 120px;
     border-radius: 64px 64px 0px 0px;
-    background-image: url(images/game1.jpg);
+    background-image: url(assets/Apex.webp);
     background-size: cover;
     background-position: center;
 }
 
-.articles .article .article-body h5{
+.articles .article .article-body h2{
     color: var(--accent);
     font-size: large;
     text-align: start;
@@ -1010,12 +1095,12 @@ footer{
     width: 320px;
     height: 120px;
     border-radius: 64px 64px 0px 0px;
-    background-image: url(game1.jpg);
+    background-image: url(assets/CS2.webp);
     background-size: cover;
     background-position: center;
 }
 
-.articles .article .article-body h5{
+.articles .article .article-body h2{
     color: var(--accent);
     font-size: large;
     text-align: start;
@@ -1422,6 +1507,7 @@ footer{
     font-size: 16px;
     background-color: rgba(8, 29, 25, 1);
     border: 2px solid gold;
+    color: var(--text-primary);
 }
 
 .send-btn {
@@ -1519,21 +1605,7 @@ footer h3{
     text-decoration: none;
 }
 
-.social-media{
-    display: flex;
-    gap: 15px;
-}
 
-
-.social-media i{
-    border: 2px solid var(--accent);
-    border-radius: 8px;
-    height: fit-content;
-    width: fit-content;
-    padding: 10px;
-    background-color: #524917;
-    color: var(--accent);
-}
 
 .search-text input{
     width: 77%;
@@ -1542,6 +1614,7 @@ footer h3{
     outline: none;
     font-size: 16px;
     background-color: transparent;
+    color: var(--text-primary);
 }
 
 .search-bar{
@@ -1669,7 +1742,7 @@ section .container {
     border-radius: 25px;
 }
 .card-header {
-    background-image: url("frame.jpg");
+    background-image: url("assets/frame.webp");
     background-position: center;
     height: 160px;
     border-top-left-radius: 25px;
