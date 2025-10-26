@@ -1,11 +1,11 @@
-# Arena Connect Web Application 🎮
+# Arena Connect Web Application 
 
 **Arena Connect** est une application web dédiée aux joueurs et passionnés d’E-sport.  
 Ce projet a été réalisé par l’équipe **GameForge Digital** pour créer un réseau social interactif et responsive pour la communauté gaming.
 
 ---
 
-## 🔹 Objectif du projet
+##  Objectif du projet
 
 - Créer une interface web responsive et interactive.  
 - Permettre aux utilisateurs de :  
@@ -16,7 +16,7 @@ Ce projet a été réalisé par l’équipe **GameForge Digital** pour créer un
 
 ---
 
-## 💻 Technologies utilisées
+##  Technologies utilisées
 
 - HTML5 & CSS3 (Grid, Flexbox, Media Queries)  
 - JavaScript pour les interactions : modals, menu burger  
@@ -24,7 +24,7 @@ Ce projet a été réalisé par l’équipe **GameForge Digital** pour créer un
 
 ---
 
-## 📱 Responsivité
+##  Responsivité
 
 - **Mobile** : `< 480px` → menu burger et mise en page verticale  
 - **Tablette** : `769px à 1200px` → ajustement des grilles et textes  
@@ -32,7 +32,7 @@ Ce projet a été réalisé par l’équipe **GameForge Digital** pour créer un
 
 ---
 
-## ⚡ Fonctionnalités principales
+##  Fonctionnalités principales
 
 - Menu burger pour la navigation sur mobile  
 - Modals pour **Connexion / Inscription**  
@@ -40,7 +40,7 @@ Ce projet a été réalisé par l’équipe **GameForge Digital** pour créer un
 - Interface claire et lisible sur tous les appareils  
 
 ---
-## 🚀 Design sur Figma
+##  Design sur Figma
 
 1. ouvrire ce lien :
 ```bash
@@ -48,7 +48,7 @@ Ce projet a été réalisé par l’équipe **GameForge Digital** pour créer un
 ```
 ---
 
-## 🚀 Installation
+##  Installation
 
 1. Cloner le dépôt GitHub :
 
@@ -59,7 +59,7 @@ git clone https://github.com/n1o2h/ArenaConnect_webApp.git
 
 ---
 
-👥 Équipe
+ Équipe
 
 Membre 	Rôle
 
@@ -70,9 +70,10 @@ SELLAH-EDDINE-ZEMRANI	Maquettes Figma et Integration de la page actualité et d�
 
 ---
 
-📂 Lien du projet
+ Lien du projet
 
-Dépôt GitHub : ArenaConnect_webApp
+Dépôt GitHub : [ArenaConnect_webApp] (https://n1o2h.github.io/ArenaConnect_webApp/index.html)
+
 
 
 ---
