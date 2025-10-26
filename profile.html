@@ -1,16 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <style>
+    <!-- Metadonnées : Description est Mots Clés -->
+    <meta name="description"
+        content="Arena Connect - Plateforme E-Sport pour tournois, équipes et actualités gaming compétitif">
+    <meta name="keywords" content="esport, gaming, tournois, compétition, équipes">
+    <!-- Titre de l'application web -->
+    <title>ARENA CONNECT WEB APPLICATION</title>
+    <!-- fichier style css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fichier javascript -->
+    <script src="https://kit.fontawesome.com/e53a9172bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- ficher all.main.css pour les icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Type de la font de text -->
+    <style>
         /* font */
     @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
     </style>
 
 </head>
+
 <body>
+    <div class="modal-connnexion" id="loginModal">
+        <div class="modal-content">
+            <form action="">
+                <div class="modal-header">
+                    <h2>Connexion</h2>
+                    <i class="bi bi-x-lg" id="close" onclick="closeModal()"></i>
+                </div>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Entrez votre email" required>
+                
+                <label for="password">Mot de passe</label>
+                <input type="password" placeholder="Entrez votre mot de passe" required>
+                
+                <p>Pas encore de compte ? <a href="#" onclick="displaySignUpForm()">Créer un compte</a></p>
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal-inscription" id="signUpModal">
+        <div class="modal-content">
+            <form action="">
+                <div class="modal-header">
+                    <h2>Inscription</h2>
+                    <i class="bi bi-x-lg" id="close" onclick="closeModal()"></i>
+                </div>
+                <label for="Nom">Nom</label>
+                <input type="Nom" placeholder="Entrez votre Nom" required>
+
+                <label for="email">Email</label>
+                <input type="email" placeholder="Entrez votre email" required>
+                
+                <label for="password">Mot de passe</label>
+                <input type="password" placeholder="Entrez votre mot de passe" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!--  Debut Section Menue de Navication -->
+    <header>
+        <nav>
+            <div id="LOGO"><a href="index.html" class="logo">Arena <span class="logoC">Connect</span></a></div>
+            <ul class="nav-list" id="link">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="actualite.html">Actualité</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="groups.html">Groups</a></li>
+                <li><a id="Button-Connexion" style="cursor: pointer;" onclick="displayModal()">Connexion</a></li>
+            </ul>
+            <div class="menu" onclick="displayMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <!--  Fin Section Menue de Navication -->
+
+    <!--  Debut Section Héros Profile-->
+    <section class="hero-profile">
+        <div class="image-profile"></div>
+        <h2><span><i class="fa-solid fa-circle"></i></span> Andreas Palmer</h2>
+        <p class="jeu">Valorant</p>
+        <p class="niveau">Diamant 1</p>
+        <div class="parametre-icon">
+            <a href="parametre.html" aria-label="icon parametre">
+                <i class="fa-solid fa-gear"></i>
+            </a>
+        </div>
+    </section>
+    <!--  Fin Section Héros -->
+
+    <!--  Debut Section Social Media -->
+    <section class="icon-items">
+        <div class="social-media-icons">
+            <div class="icon-item">
+                <i class="fa-brands fa-twitch"></i>
+            </div>
+            <div class="icon-item">
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+            <div class="icon-item">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="icon-item">
+                <i class="fa-brands fa-spotify"></i>
+            </div>
+            <div class="icon-item">
+                <i class="fa-solid fa-basketball"></i>
+            </div>
+        </div>
+        <div class="bio-text">
+            <p>"Lorem ipsum, dolor sit amet  dolor sit amet consecteturlorem  elit.laudantium laboriosam dolor sit dolor sit amet dolordistinction."
+            </p>
+        </div>
+    </section>
+    <!--  Fin Section Social Media -->
     
+    <!--  Debut Section jeux participé -->
+    <Section class="carts-jeux">
+        <div class="cart-item-jeu item1">
+            <p class="nonjeu">Apex Legends</p>
+        </div>
+        <div class="cart-item-jeu item2">
+            <p class="nonjeu">CS2</p>
+        </div>
+        <div class="cart-item-jeu item3">
+            <p class="nonjeu">Valorant</p>
+        </div>
+        <div class="cart-item-jeu item4">
+            <p class="nonjeu">Leage of Leaagend </p>
+        </div>
+        <div class="cart-item-jeu item1">
+            <p class="nonjeu">Apex Legends</p>
+        </div>
+        <div class="cart-item-jeu item2">
+            <p class="nonjeu">CS2</p>
+        </div>
+        <div class="cart-item-jeu item3">
+            <p class="nonjeu">Valorant</p>
+        </div>
+        <div class="cart-item-jeu item4">
+            <p class="nonjeu">Leage of leagend</p>
+        </div>
+        <div class="cart-item-jeu item1">
+            <p class="nonjeu">Apex Legends</p>
+        </div>
+        <div class="cart-item-jeu item2">
+            <p class="nonjeu">CS2</p>
+        </div>
+        
+    </Section>
+    <!-- Debut de footer -->
+    <footer>
+        <div id="footer-grid">
+            <div id="Finfo">
+                <h2>Arena <span>Connect</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+                <p>© 2025 GameForge, Inc. Tous droits réservés.</p>
+            </div>
+            <div class="sec-title">
+                <h3>Les Jeux</h3>
+                <div class="sec-content">
+                    <h4>League of Legends</h4>
+                    <h4>Apec Legends</h4>
+                    <h4>Valorant</H4>
+                    <h4>CS2</h4>
+                </div>
+            </div>
+            <div class="sec-title">
+                <h3>Navigation</h3>
+                <div class="sec-content">
+                    <h4>Acceuil</h4>
+                    <h4>Joueurs</h4>
+                    <h4>Profile</h4>
+                    <h4>Actualité</h4>
+                    <h4>Chat</h4>
+                    <h4>Groups</h4>
+                </div>
+            </div>
+            <div class="sec-title">
+                <h3>Contact</h3>
+                <div class="social-media">
+                    <i class="fa-brands fa-twitch"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-discord"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fin de footer -->
+<script src="script.js"></script>
 </body>
 </html>
