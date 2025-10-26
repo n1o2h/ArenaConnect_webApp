@@ -62,18 +62,15 @@ git clone https://github.com/n1o2h/ArenaConnect_webApp.git
  Équipe
 
 Membre 	Rôle
-
 Nouhaila-Ait-Hammad 	Maquettes Figma et Integration de la page profile et paramétre
 Mohamed-Aymane-Jaafouri	Maquettes Figma et Integration de la page accueil et connexion/Inscription
 SELLAH-EDDINE-ZEMRANI	Maquettes Figma et Integration de la page actualité et détail 
- Aymen-Oumaalla	Maquettes Figma et Integration de la page chat et group
+Aymen-Oumaalla	        Maquettes Figma et Integration de la page chat et group
 
 ---
 
  Lien du projet
 
 Dépôt GitHub : [ArenaConnect_webApp](https://n1o2h.github.io/ArenaConnect_webApp/index.html)
-
-
 
 ---
