@@ -379,16 +379,6 @@ footer{
     #footer-grid{
         grid-template-columns: auto ;
     }
-    #link{
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 56px;
-        right: 25px;
-        background-color: #fff;
-        padding: 15px; 
-    }
-
 }
 /*******************  Fin Aymen (Page Accueil et connexion & inscription) ************************/
 
