@@ -61,3 +61,22 @@ function closeModal() {
     signupmodal.style.display ="none";
     connectionmodal.style.display ="none";
 }
+
+window.addEventListener("resize", handleResize);
+
+function handleResize() {
+    let messages = document.getElementById("messages-section");
+    let conversation = document.getElementById("conversation-section");
+    let link = document.getElementById("link");
+
+    if (window.innerWidth >= 720) {
+        messages.style.display = "flex";
+        messages.style.width = "74vw";
+        conversation.style.display = "block";
+        if (link) link.style.display = "flex";
+    } else if (window.innerWidth >= 480) {
+        messages.style.width = "100vw";
+        messages.style.display = "block";
+        conversation.style.display = "block";
+    }
+}
