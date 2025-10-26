@@ -72,7 +72,7 @@ SELLAH-EDDINE-ZEMRANI	Maquettes Figma et Integration de la page actualité et d�
 
  Lien du projet
 
-Dépôt GitHub : ArenaConnect_webApp (https://n1o2h.github.io/ArenaConnect_webApp/index.html)
+Dépôt GitHub : [ArenaConnect_webApp](https://n1o2h.github.io/ArenaConnect_webApp/index.html)
 
 
 
