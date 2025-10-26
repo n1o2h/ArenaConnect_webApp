@@ -145,7 +145,6 @@ footer{
 
 /***************************************************  Fin Global ***************************************************/
 
-
 /****************************  Debut Aymen (Page accueil et connexion) ****************************/
 /* Hero section */
 .hero-section{
@@ -380,7 +379,7 @@ footer{
     #footer-grid{
         grid-template-columns: auto ;
     }
-
+}
 /*******************  Fin Aymen (Page Accueil et connexion & inscription) ************************/
 
 /***********************  Debut Nohaila (Page profile et parametre) *************************/
@@ -660,7 +659,7 @@ footer{
 /* Fin de la page parametre */
 
 /* Media querie de la page profile  et parametre pour le mobile*/
-@media (max-width:480px){
+@media (max-width: 480px){
     .hero-profile{
         padding: 30px;
         height: 200px;
@@ -716,7 +715,7 @@ footer{
 /* Media querie de la page profile et parametre pour la tablet*/
 
 
-@media   (min-width : 481px) and (max-width : 768px){
+@media (min-width : 481px) and (max-width : 768px){
     .hero-profile{
         padding: 30px;
         height: 300px;
@@ -739,8 +738,6 @@ footer{
     }
     .parametre-icon{
         font-size: 1.5rem;
-        
-
     }
     .icon-items .icon-item{
         font-size: 2rem;
@@ -767,7 +764,7 @@ footer{
 }
 
 /* Media querie de la page profile  et paremetre  pour laptop*/
-@media (min-width >=  769px) and (max-width >= 1200px ){
+@media (min-width : 769px) and (max-width  : 1200px){
     .hero-profile{
         padding: 30px;
         height: 400px;
@@ -803,8 +800,6 @@ footer{
     .carts-jeux{
         margin-top: 30px;
     }
-}
-
 }
 
 /*********************  Fin Nohaila (Page profile et parametre) ***************************/
