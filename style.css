@@ -147,7 +147,7 @@ footer{
 /****************************  Debut Aymen (Page accueil et connexion) ****************************/
 /* Hero section */
 .hero-section{
-    background-image: url(assets/Hero.jpg);
+    background-image: url(assets/Hero.webp);
 }
 #hero-grid{
     display: grid;
@@ -330,6 +330,7 @@ footer{
 @media (max-width: 480px){
     /* hero */
     #hero-grid{
+    display: grid;
         padding: 2rem;
     }
     #hero-section-maintext{
@@ -386,7 +387,7 @@ footer{
 .hero-profile{
     width: auto;
     height: 200px;
-    background-image: var(--gradient-image), url(assets/backgroundProfile.png);
+    background-image: var(--gradient-image), url(assets/ProfileBanner.webp);
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     background-repeat: no-repeat;
@@ -408,7 +409,7 @@ footer{
 .image-profile{
     width: 80px;
     height: 80px;
-    background-image: url(assets/imageProfile.png);
+    background-image: url(assets/PFP.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -519,7 +520,7 @@ footer{
     
 }
 .item1{
-    background-image: url(assets/jeu1.png);
+    background-image: url(assets/CS2.webp);
     
     background-repeat: no-repeat;
     background-size: cover;
@@ -530,19 +531,19 @@ footer{
     overflow: hidden;
 }
 .item2{
-    background-image: url(assets/jeu2.png);
+    background-image: url(assets/Valorant.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .item3{
-    background-image: url(assets/jeu3.png);
+    background-image: url(assets/LOL.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .item4{
-    background-image: url(assets/jeu4.png);
+    background-image: url(assets/Apex.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -850,7 +851,7 @@ footer{
     width: 320px;
     height: 120px;
     border-radius: 64px 64px 0px 0px;
-    background-image: url(images/game1.jpg);
+    background-image: url(assets/Apex.webp);
     background-size: cover;
     background-position: center;
 }
@@ -1092,7 +1093,7 @@ footer{
     width: 320px;
     height: 120px;
     border-radius: 64px 64px 0px 0px;
-    background-image: url(game1.jpg);
+    background-image: url(assets/CS2.webp);
     background-size: cover;
     background-position: center;
 }
@@ -1739,7 +1740,7 @@ section .container {
     border-radius: 25px;
 }
 .card-header {
-    background-image: url("assets/frame.jpg");
+    background-image: url("assets/frame.webp");
     background-position: center;
     height: 160px;
     border-top-left-radius: 25px;
