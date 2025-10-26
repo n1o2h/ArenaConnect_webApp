@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e53a9172bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <style>
         /* font */
@@ -14,6 +15,44 @@
     </style>
 </head>
 <body>
+        <div class="modal-connnexion" id="loginModal">
+        <div class="modal-content">
+            <form action="">
+                <div class="modal-header">
+                    <h2>Connexion</h2>
+                    <i class="bi bi-x-lg" id="close" onclick="closeModal()"></i>
+                </div>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Entrez votre email" required>
+                
+                <label for="password">Mot de passe</label>
+                <input type="password" placeholder="Entrez votre mot de passe" required>
+                
+                <p>Pas encore de compte ? <a href="#" onclick="displaySignUpForm()">Créer un compte</a></p>
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal-inscription" id="signUpModal">
+        <div class="modal-content">
+            <form action="">
+                <div class="modal-header">
+                    <h2>Inscription</h2>
+                    <i class="bi bi-x-lg" id="close" onclick="closeModal()"></i>
+                </div>
+                <label for="Nom">Nom</label>
+                <input type="Nom" placeholder="Entrez votre Nom" required>
+
+                <label for="email">Email</label>
+                <input type="email" placeholder="Entrez votre email" required>
+                
+                <label for="password">Mot de passe</label>
+                <input type="password" placeholder="Entrez votre mot de passe" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
     <!--Header Section-->
     <header>
         <nav>
@@ -24,7 +63,7 @@
                 <li><a href="actualite.html">Acctualité</a></li>
                 <li><a href="chat.html">Chat</a></li>
                 <li><a href="groups.html">Groups</a></li>
-                <li><a id="Button-Connexion" href="">Connexion</a></li>
+                <li><a id="Button-Connexion" style="cursor: pointer;" onclick="displayModal()">Connexion</a></li>
             </ul>
         </nav>
     </header>
@@ -37,11 +76,9 @@
             <div id="hero-section-secondarytext">
                 <h2>Trouvez des amis et découvrez de vastes communautés d'e-sport.</h2>
             </div>
-            <div style="align-content: center;">
-                <a href="groupes" id="hero-section-B1">Découvrez les Groupes</a>
-            </div>
-            <div style="align-content: center;">
-                <a href="acctualité" id="hero-section-B2">Derniéres nouvelles</a>
+            <div id="hero-section-B-align">
+                <a href="groups.html" id="hero-section-B1">Découvrez les Groupes</a>        
+                <a href="actualite.html" id="hero-section-B2">Derniéres nouvelles</a>
             </div>
         </div>
     </section>
@@ -131,6 +168,6 @@
             </div>
         </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
