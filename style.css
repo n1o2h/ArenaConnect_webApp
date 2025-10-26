@@ -20,10 +20,12 @@
     font-weight: normal;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
 body{
     margin: 0px;
     padding: 0px;
+    background: var(--background-1);
 }
 
 /*******************************  Fin Global *********************************/
