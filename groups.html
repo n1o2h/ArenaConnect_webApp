@@ -5,29 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <title>Groupes - E-ARENA</title>
+    <!-- Metadonnées : Description est Mots Clés -->
+    <meta name="description"
+        content="Arena Connect - Plateforme E-Sport pour tournois, équipes et actualités gaming compétitif">
+    <meta name="keywords" content="esport, gaming, tournois, compétition, équipes">
+    <!-- Titre de l'application web -->
+    <title>ARENA CONNECT WEB APPLICATION</title>
+        <script src="https://kit.fontawesome.com/e53a9172bb.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* font */
+    @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+    </style>
+
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">Arena <span style="color: #00ffff">Connect</span></div>
-            <div class="links" id="link">
-                <a href="">Acceuil</a>
-                <a href="">Joueurs</a>
-                <a href="">Profile</a>
-                <a href="">Actualité</a>
-                <a href="chat.html">Chat</a>
-                <a href="groups.html">Groupes</a>
-                <button>Connexion</button>
-            </div>
-            <div class="menu" onclick="displayMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <div class="modal-connnexion" id="loginModal">
+        <div class="modal-content">
+            <form action="">
+                <div class="modal-header">
+                    <h2>Connexion</h2>
+                    <i class="bi bi-x-lg" id="close" onclick="closeModal()"></i>
+                </div>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Entrez votre email" required>
+                
+                <label for="password">Mot de passe</label>
+                <input type="password" placeholder="Entrez votre mot de passe" required>
+                
+                <p>Pas encore de compte ? <a href="#" onclick="displaySignUpForm()">Créer un compte</a></p>
+                <button type="submit">Se connecter</button>
+            </form>
         </div>
+    </div>
+    <div class="modal-inscription" id="signUpModal">
+        <div class="modal-content">
+            <form action="">
+                <div class="modal-header">
+                    <h2>Inscription</h2>
+                    <i class="bi bi-x-lg" id="close" onclick="closeModal()"></i>
+                </div>
+                <label for="Nom">Nom</label>
+                <input type="Nom" placeholder="Entrez votre Nom" required>
+
+                <label for="email">Email</label>
+                <input type="email" placeholder="Entrez votre email" required>
+                
+                <label for="password">Mot de passe</label>
+                <input type="password" placeholder="Entrez votre mot de passe" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Header Section-->
+    <header>
+        <nav>
+            <div id="LOGO"><a href="index.html" class="logo">Arena <span class="logoC">Connect</span></a></div>
+            <ul class="nav-list">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="actualite.html">Actualité</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="groups.html">Groups</a></li>
+                <li><a id="Button-Connexion" style="cursor: pointer;" onclick="displayModal()">Connexion</a></li>
+            </ul>
+        </nav>
     </header>
     <section>
+        <h1 class="Ptitle" style="text-align: center;background: var(--background-2);margin:0; padding-top: 2rem;">Groups</h1>
         <div class="container">
             <div class="card">
                 <div class="card-header"></div>
@@ -79,38 +125,46 @@
             </div>
         </div>
     </section>
+    <!--footer-->
     <footer>
-        <div class="col">
-            <h3 style="color : white">Arena <span style="color: #00ffff">Connect</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi atque, eaque quasi recusandae beatae autem, neque cum dolorem nulla facilis itaque, sapiente amet officia omnis ipsa nesciunt esse voluptatum alias.</p>
-            <p style="color: gray;">© 2025 GameForge, Inc. Tous droits réservés.</p>
-        </div>
-        <div class="col">
-            <h3>Les jeux</h3>
-            <a href="">League of legends</a>
-            <a href="">Apex legends</a>
-            <a href="">Valorant</a>
-            <a href="">CS2</a>
-        </div>
-        <div class="col">
-            <h3>Navigation</h3>
-            <a href="">Acceuil</a>
-            <a href="">Joueurs</a>
-            <a href="">Profile</a>
-            <a href="">Actualité</a>
-            <a href="">Chat</a>
-            <a href="">Groupes</a>
-        </div>
-        <div class="col">
-            <h3>Contact</h3>
-            <div class="social-media">
-                <i class="bi bi-twitch"></i>
-                <i class="bi bi-twitter"></i>
-                <i class="bi bi-discord"></i>
-                <i class="bi bi-youtube"></i>
+        <div id="footer-grid">
+            <div id="Finfo">
+                <h2>Arena <span>Connect</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+                <p>© 2025 GameForge, Inc. Tous droits réservés.</p>
+            </div>
+            <div class="sec-title">
+                <h3>Les Jeux</h3>
+                <div class="sec-content">
+                    <h4>League of Legends</h4>
+                    <h4>Apec Legends</h4>
+                    <h4>Valorant</H4>
+                    <h4>CS2</h4>
+                </div>
+            </div>
+            <div class="sec-title">
+                <h3>Navigation</h3>
+                <div class="sec-content">
+                    <h4>Accueil</h4>
+                    <h4>Joueurs</h4>
+                    <h4>Profile</h4>
+                    <h4>Actualité</h4>
+                    <h4>Chat</h4>
+                    <h4>Groups</h4>
+                </div>
+            </div>
+            <div class="sec-title">
+                <h3>Contact</h3>
+                <div class="social-media">
+                    <i class="fa-brands fa-twitch"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-discord"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

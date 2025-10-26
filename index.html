@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArenaConnect</title>
+    <!-- Metadonnées : Description est Mots Clés -->
+    <meta name="description"
+        content="Arena Connect - Plateforme E-Sport pour tournois, équipes et actualités gaming compétitif">
+    <meta name="keywords" content="esport, gaming, tournois, compétition, équipes">
+    <!-- Titre de l'application web -->
+    <title>ARENA CONNECT WEB APPLICATION</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e53a9172bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <style>
         /* font */
@@ -14,17 +20,55 @@
     </style>
 </head>
 <body>
+        <div class="modal-connnexion" id="loginModal">
+        <div class="modal-content">
+            <form action="">
+                <div class="modal-header">
+                    <h2>Connexion</h2>
+                    <i class="bi bi-x-lg" id="close" onclick="closeModal()"></i>
+                </div>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Entrez votre email" required>
+                
+                <label for="password">Mot de passe</label>
+                <input type="password" placeholder="Entrez votre mot de passe" required>
+                
+                <p>Pas encore de compte ? <a href="#" onclick="displaySignUpForm()">Créer un compte</a></p>
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal-inscription" id="signUpModal">
+        <div class="modal-content">
+            <form action="">
+                <div class="modal-header">
+                    <h2>Inscription</h2>
+                    <i class="bi bi-x-lg" id="close" onclick="closeModal()"></i>
+                </div>
+                <label for="Nom">Nom</label>
+                <input type="Nom" placeholder="Entrez votre Nom" required>
+
+                <label for="email">Email</label>
+                <input type="email" placeholder="Entrez votre email" required>
+                
+                <label for="password">Mot de passe</label>
+                <input type="password" placeholder="Entrez votre mot de passe" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
     <!--Header Section-->
     <header>
         <nav>
             <div id="LOGO"><a href="index.html" class="logo">Arena <span class="logoC">Connect</span></a></div>
             <ul class="nav-list">
-                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="profile.html">Profile</a></li>
-                <li><a href="actualite.html">Acctualité</a></li>
-                <li><a href="">Chat</a></li>
-                <li><a href="">Groups</a></li>
-                <li><a id="Button-Connexion" href="">Connexion</a></li>
+                <li><a href="actualite.html">Actualité</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="groups.html">Groups</a></li>
+                <li><a id="Button-Connexion" style="cursor: pointer;" onclick="displayModal()">Connexion</a></li>
             </ul>
         </nav>
     </header>
@@ -37,20 +81,18 @@
             <div id="hero-section-secondarytext">
                 <h2>Trouvez des amis et découvrez de vastes communautés d'e-sport.</h2>
             </div>
-            <div style="align-content: center;">
-                <a href="groupes" id="hero-section-B1">Découvrez les Groupes</a>
-            </div>
-            <div style="align-content: center;">
-                <a href="acctualité" id="hero-section-B2">Derniéres nouvelles</a>
+            <div id="hero-section-B-align">
+                <a href="groups.html" id="hero-section-B1">Découvrez les Groupes</a>        
+                <a href="actualite.html" id="hero-section-B2">Derniéres nouvelles</a>
             </div>
         </div>
     </section>
     <!--About-->
     <article id="about">
         <div id="about-content">
-            <img src="assets/About.png">
+            <img src="assets/About.webp" alt="image">
             <div id="about-text">
-                <h2 class="Ptitle">About</h2>
+                <h2 class="Ptitle">A propos</h2>
                 <p class="Ptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi.</p>           
             </div>
         </div>
@@ -60,10 +102,10 @@
         <div id="gamelistBG">
             <h2 class="Ptitle" style="text-align: center;">Trouvez votre communauté</h2>
             <div id="gamelist-grid">
-                <img class="gamelist-game" src="assets/LOL.png">
-                <img class="gamelist-game" src="assets/Valorant.jpg">
-                <img class="gamelist-game" src="assets/CS2.jpeg">
-                <img class="gamelist-game" src="assets/Apex.jpg">
+                <img class="gamelist-game" src="assets/LOL.webp" alt="image">
+                <img class="gamelist-game" src="assets/Valorant.webp" alt="image">
+                <img class="gamelist-game" src="assets/CS2.webp" alt="image">
+                <img class="gamelist-game" src="assets/Apex.webp" alt="image">
             </div>
         </div>
     </section>
@@ -76,10 +118,10 @@
             </div>
             <div id="profile-preview">
                 <div>
-                    <img id="profile-preview-banner" src="assets/ProfileBanner.jpeg">
+                    <img id="profile-preview-banner" src="assets/ProfileBanner.webp" alt="image">
                 </div>
                 <div id="profile-preview-pfp">
-                    <img src="assets/PFP.gif"><span>Pablo</span>            
+                    <img src="assets/PFP.webp" alt="image"><span>Pablo</span>            
                 </div>
                 <div id="profile-preview-bio">
                     <h2>Bio..</h2>
@@ -112,25 +154,25 @@
             <div class="sec-title">
                 <h3>Navigation</h3>
                 <div class="sec-content">
-                    <h4>Acceuil</h4>
+                    <h4>Accueiil</h4>
                     <h4>Joueurs</h4>
                     <h4>Profile</h4>
-                    <h4>Acctualité</h4>
+                    <h4>Actualité</h4>
                     <h4>Chat</h4>
                     <h4>Groups</h4>
                 </div>
             </div>
             <div class="sec-title">
                 <h3>Contact</h3>
-                <div class="sec-content">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="social-media">
+                    <i class="fa-brands fa-twitch"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-discord"></i>
+                    <i class="fa-brands fa-youtube"></i>
                 </div>
             </div>
         </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
