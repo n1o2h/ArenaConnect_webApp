@@ -1,5 +1,4 @@
-/***************************************************  Debut Global /***************************************************/
-
+/****************************************  Debut Global /************************************/
 :root{
     --primary-color: #7CE9D1;
     --secondary-color: #87171B;
@@ -10,7 +9,10 @@
     --text-primary: #DCF9F2;
     --text-secondary: #373D3C;
     --gradient-button-1: linear-gradient(90deg, #7CE9D1 0%, rgba(124, 233, 209, 0.6) 100%);
-    
+    --gradient-image: linear-gradient(to top, #0000009a 50% ,transparent);
+    --color-enLigne: #1CD356;
+    --background-Color:#00000033;
+    --Third-color:#ffffff;
 } 
 
 *{
@@ -23,6 +25,8 @@ body{
     margin: 0px;
     padding: 0px;
 }
+
+/*******************************  Fin Global *********************************/
 
 /* Header section */
 
@@ -139,8 +143,8 @@ footer{
 
 /***************************************************  Fin Global ***************************************************/
 
-/***************************************************  Debut Aymen (Page accueil et connexion) ***************************************************/
 
+/****************************  Debut Aymen (Page accueil et connexion) ****************************/
 /* Hero section */
 .hero-section{
     background-image: url(assets/Hero.jpg);
@@ -374,32 +378,434 @@ footer{
         grid-template-columns: auto ;
     }
 
+/*******************  Fin Aymen (Page Accueil et connexion & inscription) ************************/
 
+/***********************  Debut Nohaila (Page profile et parametre) *************************/
+
+ /* image  background */
+.hero-profile{
+    width: auto;
+    height: 200px;
+    background-image: var(--gradient-image), url(assets/backgroundProfile.png);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "imageProfile  nomProfile  nomProfile parametre"
+    "imageProfile jeuFavori niveau parametre"
+    ;
+    place-items: center;
+    gap: 15px;
+}
+
+ /* image  profile */
+
+.image-profile{
+    width: 80px;
+    height: 80px;
+    background-image: url(assets/imageProfile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    border: 2px solid var(--accent);
+    justify-self: end;
+    grid-area: imageProfile;
+}
+
+ /*  block d'Information personnel du profile */
+
+.hero-profile h2{
+    color: var(--text-primary);
+    grid-area:  nomProfile;
+    font-size: 1.3em;
+    font-weight: 700;
+    align-self: self-end;
+}
+.fa-circle{
+    color: var(--color-enLigne);
+    font-size: 0.3em;
+}
+.hero-profile p.jeu{
+    grid-area: jeuFavori;
+    align-self: self-start;
+    color: var(--text-primary);
+
+
+}
+.hero-profile p.niveau{
+    grid-area: niveau;
+    align-self: self-start;
+    color: var(--text-primary);
+
+
+}
+.parametre-icon{
+    
+    padding: 1rem;
+    grid-area: parametre;
+    align-self: self-start;
+    font-size: 1em;
+    justify-self: end;
+}
+.parametre-icon i{
+    color: #ffffff;
+}
+
+ /* social media  Bio */
+.bio-container{
+    width: 100%;
+    /* height: 200px; */
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+    margin-bottom: 10px;
+}
+.social-media-icons{
+    padding: 20px;
+    background: var(--background-2);
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-around;
+    place-items: center;
+}
+.icon-item{
+    padding: 10px;
+    border-bottom: var(--accent) solid 3px;
+}
+.icon-item i{
+    font-size: 1.2em;
+    color: var(--accent);
+}
+.icon-item:hover{
+    border-radius: 8px;
+    box-shadow: 0 0 2px var(--accent);
+    transition: 0.5s  ease;
+}
+
+ /* citation du Bio */
+.bio-text{
+    border-radius: 8px;
+    width: 90%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    background: var(--background-Color);
+    box-shadow: 0 0 5px var(--Third-color);
+}
+.bio-text{
+    font-size: 0.8em;
+    font-weight: 300;
+    padding: 10px 5px;  
+    text-align: start;
+    font-style: italic;
+    color: var(--text-primary);
+
+}
+ /* Les  cartes de jeux */
+.carts-jeux{
+    padding: 30px;
+    width: 100%;
+    height:2400px;
+    display: grid;
+    grid-template-rows:repeat(auto-fill, minmax(200px, auto)) ;
+    grid-template-columns:repeat(auto-fill,minmax(300px, auto)) ;
+    gap: 20px;
+    
+}
+.item1{
+    background-image: url(assets/jeu1.png);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows:repeat(1, 1fr) ;
+    align-items: end;
+    overflow: hidden;
+}
+.item2{
+    background-image: url(assets/jeu2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.item3{
+    background-image: url(assets/jeu3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.item4{
+    background-image: url(assets/jeu4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cart-item-jeu{
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows:repeat(1, 1fr) ;
+    align-items: end;
+    overflow: hidden;
+}
+.nonjeu{
+    width: 100%;
+    height: 50px;
+    background:var(--accent);
+    text-align: center;
+    padding: 15px;
+    font-weight: 900;
+    font-size: 1em;
+    color: var(--background-1);
+    display: none;
 }
 
 
+/* Debut de la page parametre */
+.container-buttons{
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(60px, 1fr));
+    /* grid-template-columns: repeat(1, minmax(20px, 1fr)); */
+
+    place-items: center;
+    background: var(--background-2);
+}
+.container-buttons a, .btn-form a{
+    
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.btn-form{
+    border-radius: 5px;
+    padding:  10px  20px;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    
+}
+
+.container-form{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.form-param{
+    width: 80%;
+    height: 400px;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    background-color: var(--background-1);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.input-cont{    
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.input-cont label{
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1rem;
+    
+}
+.input-cont input{
+    width: 60%;
+    height: 40px;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    background: var(--background-2);
+    color: var(--text-primary);
+}
+
+.input-cont input::placeholder{
+    color:#ffffff80;
+    padding: 10px;
+    font-size: 0.7rem;
+}
+.container-enregistrer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Fin de la page parametre */
+
+/* Media querie de la page profile  et parametre pour le mobile*/
+@media (max-width:480px){
+    .hero-profile{
+        padding: 30px;
+        height: 200px;
+    }
+    .image-profile{
+        width: 70px;
+        height: 70px;
+        gap: 20px;
+    }
+    .hero-profile h2{
+        font-size: 0.7rem;
+    }
+    .hero-profile .fa-circle{
+        font-size: 0.5rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 0.7rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 0.7rem;
+    }
+    .parametre-icon{
+        font-size: 1rem;
+        
+
+    }
+    .icon-items .icon-item{
+        font-size: 1rem;
+    }
+    .bio-text{
+        /* font-size: 1.3rem; */
+        display: none;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+    .container-buttons{
+        gap: 30px;
+        width: 80%;
+        padding: 0 30px;
+        
+    }
+    .container-buttons .btn-form{
+        padding: 5px 10px;
+    }
+    .container-buttons .btn-form a{
+        font-size: 0.8rem;
+    }
+    
+}
+
+/* Media querie de la page profile et parametre pour la tablet*/
 
 
+@media   (min-width : 481px) and (max-width : 768px){
+    .hero-profile{
+        padding: 30px;
+        height: 300px;
+    }
+    .image-profile{
+        width: 150px;
+        height: 150px;
+    }
+    .hero-profile h2{
+        font-size: 1.5rem;
+    }
+    .hero-profile .fa-circle{
+        font-size: 1rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 1.3rem;
+    }
+    .parametre-icon{
+        font-size: 1.5rem;
+        
 
-/***************************************************  Fin Aymen (Page accueil et connexion) ***************************************************/
+    }
+    .icon-items .icon-item{
+        font-size: 2rem;
+    }
+    .bio-text{
+        font-size: 1.3rem;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+    .container-buttons{
+        gap: 20px;
+        width: 90%;
+        padding: 0 30px;
+        
+    }
+    .container-buttons .btn-form{
+        padding: 10px 15px;
+    }
+    .container-buttons .btn-form a{
+        font-size: 0.9rem;
+    }
+}
 
-/***************************************************  Debut Nohaila (Page profile et parametre) ***************************************************/
+/* Media querie de la page profile  et paremetre  pour laptop*/
+@media (min-width >=  769px) and (max-width >= 1200px ){
+    .hero-profile{
+        padding: 30px;
+        height: 400px;
+    }
+    .image-profile{
+        width: 250px;
+        height: 250px;
+    }
+    .hero-profile h2{
+        font-size: 3rem;
+    }       
+    .hero-profile .fa-circle{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.jeu{
+        font-size: 1.5rem;
+    }
+    .hero-profile p.niveau{
+        font-size: 1.5rem;
+    }
+    .parametre-icon{
+        font-size: 2rem;
+    
 
+    }
+    .icon-items .icon-item{
+        font-size: 3rem;
+    }
+    .bio-text{
+        font-size: 2rem;
+    }
+    
+    .carts-jeux{
+        margin-top: 30px;
+    }
+}
 
+}
 
-
-
-
-
-
-/***************************************************  Fin Nohaila (Page profile et parametre) ***************************************************/
-
-/***************************************************  Debut Salah (Page actualite et details) ***************************************************/
-
-
-
-
-
+/*********************  Fin Nohaila (Page profile et parametre) ***************************/
+/*************************  Debut Salah (Page actualite et details) **********************/
 
 /* css pour le section actualite */
 
@@ -408,14 +814,14 @@ footer{
     height: auto;
     text-align: center;
     padding-top: 20px;
-    background-color: #081D19;
+    background-color: var(--background-2);
 
 
 }
 
 .actualite-section h1{
     font-size: 56px;
-    color: #DFD73A;
+    color: var(--accent);
 }
 
 .actualite-section hr{
@@ -426,12 +832,11 @@ footer{
     padding-top: 60px;
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-column: 30px;
     margin-top: 50px;
     height: auto;
-
- 
 }
 
 .articles .article{
@@ -439,22 +844,19 @@ footer{
     height: 300px;
     border-radius: 64px;
     border: 1px solid black;
-    
-    
-    
 }
 
 .articles .article .article-header img{
     width: 320px;
     height: 120px;
     border-radius: 64px 64px 0px 0px;
-    background-image: url(game1.jpg);
+    background-image: url(images/game1.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.articles .article .article-body h5{
-    color: #DFD73A;
+.articles .article .article-body h2{
+    color: var(--accent);
     font-size: large;
     text-align: start;
     margin-left: 20px;
@@ -471,8 +873,8 @@ footer{
     width: 320px;
     height: 50px;
     border-radius: 0px 0px 64px 64px;
-    background: linear-gradient(to right, #7CE9D1 0%, rgba(124, 233, 209, 0.6) 100%);
-    filter: drop-shadow(2px 2px 10px rgba(124, 233, 209, 0.6));
+    background: linear-gradient(to right, var(--primary-color) 0%, rgba(124, 233, 209, 0.6) 100%);
+    box-shadow: 4px 4px 15px var(--primary-color);
     position: relative;
 }
 .articles .article .footer a{
@@ -483,6 +885,37 @@ footer{
     top: 12px;
     left: 120px;
     color: black;
+}
+
+/* media query pour la  page actualite pour le mobile */
+@media (max-width: 500px) {
+    .actualite-section h1{
+        font-size: 36px;
+        
+    }
+    .actualite-section hr{
+        width: 70px;
+    }
+    .actualite-section .articles{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* media query pour la  page actualite pour le tablettes */
+@media (min-width:481px) and (max-width: 768px) {
+    .actualite-section h1{
+        font-size: 46px;
+        
+    }
+    .actualite-section hr{
+        width: 80px;
+    }
+    .actualite-section .articles{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* css pour la page details  */
@@ -540,10 +973,6 @@ footer{
     line-height: 23px;
 }
 
-.card-details .commentaire{
-    margin-top: -50px;
-     margin-left: 67px;
-}
 
 .card-details .commentaire label{
     color: #DFD73A;
@@ -551,111 +980,373 @@ footer{
     justify-items: start;
 }
 
-.card-details .commentaire textarea{
-    margin-top: 4px;
-    margin-left: 300px;
-    width: 20vw;
-    height: 10vh;
-    background-color:#03110F;
-  
-}
 
 .details-section .btn{
     margin-top: 20px;
-    border: 2px solid #DFD73A;
-    border-radius: 8px;
-    width: 100px;
-    height: 30px;
+    border: 1px solid #DFD73A;
+    box-shadow: 1px 1px 5px  #DFD73A;
+    border-radius: 12px;
+    width: 170px;
+    height: 40px;
     justify-items: center;
+    position: relative;
 
 }
+
+
+
+/* css pour la page details partie designe mobile */
+
+@media (max-width:480px){
+    .details-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+    }
+
+    .details-section .card-details {
+        width: 95%;
+        max-width: 450px;
+        border-radius: 30px;
+        box-sizing: border-box;
+    }
+    .card-details h3 {
+        margin-top: 15px;
+        font-size: 25px;
+        order: 2;
+    }
+    .card-details .contaniers img{
+    width: 316px;
+    height: 163px;
+    border-radius: 30px;
+    order: 1;
+    }
+    .card-details .contaniers{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* css pour le section actualite */
+
+.actualite-section{
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding-top: 20px;
+    background-color: var(--background-2);
+
+
+}
+
+.actualite-section h1{
+    font-size: 56px;
+    color: var(--accent);
+}
+
+.actualite-section hr{
+    width: 100px;
+}
+
+.actualite-section .articles{
+    padding-top: 60px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fit, auto);
+    row-gap: 5rem;
+    margin-top: 50px;
+    height: auto;
+
+}
+
+.articles .article{
+    width:  320px;
+    height: 300px;
+    border-radius: 64px;
+    border: 1px solid black;
+
+}
+
+.articles .article .article-header img{
+    width: 320px;
+    height: 120px;
+    border-radius: 64px 64px 0px 0px;
+    background-image: url(game1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.articles .article .article-body h2{
+    color: var(--accent);
+    font-size: large;
+    text-align: start;
+    margin-left: 20px;
+}
+
+
+.articles .article .article-body p{
+    margin-left: 20px;
+    margin-top: -17px;
+    font-size: small;
+    color: white;
+}
+.articles .article .footer {
+    width: 320px;
+    height: 50px;
+    border-radius: 0px 0px 64px 64px;
+    background: linear-gradient(to right, var(--primary-color) 0%, rgba(124, 233, 209, 0.6) 100%);
+    filter: drop-shadow(2px 2px 10px rgba(124, 233, 209, 0.6));
+    position: relative;
+}
+.articles .article .footer a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    top: 12px;
+    left: 120px;
+    color: black;
+}
+
+
+
+/*media query pour le la page actualite pour le mobile    */
+@media (max-width : 480px) {
+    
+    .actualite-section {
+         width: 141vw;
+    }
+    .actualite-section h1{
+        font-size: 27px;
+        
+    }
+    .actualite-section hr{
+        width: 70px;
+    }
+    .actualite-section .articles{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+/*media query pour le la page actualite pour les tablettes    */
+@media (min-width : 481px) and (max-width : 768px){
+    .actualite-section .articles{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* css pour la page details  */
+
+.details-section{
+    justify-items: center;
+    background-color: #fff;
+    width: 100vw;
+    height: auto;
+    background-color: var(--background-2);
+    color: white;
+    
+}
+
+.details-section h1{
+    margin-top: 15vh;
+    justify-self: start;
+    margin-left: 30vh;
+    color: var(--accent);
+    font-size:xx-large;
+    font-weight: 700;
+
+}
+
+.details-section .card-details{
+    text-align: center;
+    background-color: var(--background-1);
+    border-radius: 64px;
+    width: 70vw;
+    height: auto;
+    
+}
+
+.card-details h3{
+    font-size: 35px;
+    color: var(--accent);
+}
+
+.card-details .contaniers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+}
+.card-details .contaniers img{
+    width: 416px;
+    height: 263px;
+    border-radius: 60px;
+    
+    
+
+}
+
+.card-details .contaniers p{
+    font-size: 15px;
+    line-height: 23px;
+    text-align: start;
+   
+}
+
+.card-details .commentaire{
+    display: grid;
+    justify-items: start;
+    justify-content: space-around;
+    padding-bottom: 22px;
+    gap: 14px;
+}
+
+.card-details .commentaire label{
+    color: var(--accent);
+    display: block;
+    justify-items: start;
+}
+
+.card-details .commentaire textarea{
+    color: white;
+    width: 400px;
+   border-radius: 12px;
+    background-color: var(--background-1);
+  
+}
+
 
 .details-section .btn a{
+    display: grid;
     text-decoration: none;
     color: white;
-    justify-self: center;
+    justify-content: center;
+    padding-top: 5px;
 }
 
+/* le media query par la page details  pour le mobile */
+@media (max-width: 480px) {
 
+    .details-section{
+        display: grid;
+        width: 680px;
+        height: auto;
+        
+     
+    
+    }
+    .details-section .card-details {
+        width: 490px;
+        align-self: center
+    }
+    .card-details .contaniers{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 
+    .card-details .contaniers p{
+        width: 80%;
+        line-height: 29px;
+        text-align: start;
+        justify-self: center;
+    }
 
-
-
-
-
-
-
-
-
-
-
-/***************************************************  Fin Aymen (Page actualite et details) ***************************************************/
-
-/***************************************************  Debut Aymen (Page chat et groups) ***************************************************/
-
-
-
-
-
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid gold;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    .card-details .commentaire{
+        margin-top: 35px;
+        margin-left: -39px;
+        width: 100%;    
+    }
+ 
+    .commentaire textarea{
+      position: relative;
+      grid-template-columns: 1fr;
+      margin-left: 68px;
+       
+    }
+    .commentaire label{
+        margin-left: 68px;
+    }
 }
+    /* media query de la page details pour les tablttes  */
+    
+@media (min-width : 481px) and (max-width : 768px){
+       .details-section{
+        display: grid;
+        width: 100vw;
+        align-self: center;
+        height: auto;
+    }
+      .details-section .card-details {
+        width: 100%;
+        align-self: center;
+    }
+     .card-details .contaniers{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 80%;
+        justify-self: center;
+    }
 
-.logo{
-    font-weight: bolder;
-    font-size: 24px;
-}
+    .card-details .contaniers img{
+        width: 80%;
+    }
+    .card-details .contaniers p{
+        line-height: 30px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .card-details .commentaire textarea{
+        width: 600px;
+        height: 100px;
+     
+    }
+    .details-section .btn{
+        display: flex;
+        height: 55px;
+        justify-content: center;
+    }
+    .details-section .btn a{
+        font-size: 25px;
+        align-items: center;
+        justify-content: center;
+       
+    }
 
-.links{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-weight: bolder;
 }
+    
 
-.links a{
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s ease-in;
-}
+   
 
-.links a:hover{
-    opacity: 0.7;
-}
 
-.links a:active{
-    opacity: 0.7;
-}
+/*****************  Fin Salah (Page actualite et details) ***********************************/
 
-.links button{
-    font-weight: bolder;
-        border: none;
-    border-radius: 5px;
-    padding: 10px;
-    background: #00ffff;
-    color: #e82222;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
+/******************************  Debut Aymen (Page chat et groups) ***********************/
 
-.links button:hover{
-    background-color: transparent;
-    border: 1px solid #00ffff;
-    color: #fff;
-}
 
-.logo{
-    color: #fff;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
+
 
 .menu{
     display: none;
@@ -813,6 +1504,7 @@ footer{
     font-size: 16px;
     background-color: rgba(8, 29, 25, 1);
     border: 2px solid gold;
+    color: var(--text-primary);
 }
 
 .send-btn {
@@ -919,6 +1611,7 @@ footer h3{
     outline: none;
     font-size: 16px;
     background-color: transparent;
+    color: var(--text-primary);
 }
 
 .search-bar{
@@ -1046,7 +1739,7 @@ section .container {
     border-radius: 25px;
 }
 .card-header {
-    background-image: url("frame.jpg");
+    background-image: url("assets/frame.jpg");
     background-position: center;
     height: 160px;
     border-top-left-radius: 25px;
@@ -1246,9 +1939,4 @@ section .container {
 }
 
 
-
-
-
-
-
-/***************************************************  Fin Aymen (Page chat et group) ***************************************************/
+/*****************************  Fin Aymen (Page chat et group) *********************************/
