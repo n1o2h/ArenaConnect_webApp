@@ -1542,7 +1542,7 @@ footer{
     max-width: 60%;
     padding: 10px 15px;
     border-radius: 10px;
-    width: 10vw;
+    width: 7em;
 }
 
 .received {
@@ -1813,12 +1813,11 @@ section .container {
 }
 @media screen and (max-width: 720px) {
     .col-md-3{
-        position: absolute;
-        width: 20rem;
-        display: block;
-        z-index: 900;
-        height: 90vh;    
+    z-index: 100;
+    display: none;
+    width: 40vw;
     }
+
 
     .col-md-8{
         width: 100vw;
@@ -1908,6 +1907,10 @@ section .container {
         right: 25px;
         background-color: #fff;
         padding: 15px;    
+    }
+
+    .nav-list a{
+        color: #000;
     }
 
     .links a{
